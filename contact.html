@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Linda's Gold</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="lindas-gold.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="index.html" class="logo">Linda's Gold</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="cartridges.html" class="nav-link">Cartridges</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container two-column">
+        <div>
+          <h1>Visit Linda’s Gold</h1>
+          <p class="section-intro">
+            Come by for a no-pressure chat. If you’re not sure whether something is real gold or silver,
+            bring it in and Linda will check it for you while you wait.
+          </p>
+          <div class="contact-block">
+            <p><strong>Address</strong><br>
+              Linda’s Gold<br>
+              Triangle Square<br>
+              5 De Waal Road<br>
+              Fish Hoek 7975
+            </p>
+            <p><strong>Contact</strong><br>
+              Phone / WhatsApp: 0XX XXX XXXX<br>
+              Email: info@lindas-gold.co.za
+            </p>
+            <p><strong>Hours</strong><br>
+              Monday–Friday, 9:00–17:00<br>
+              Saturday mornings by arrangement
+            </p>
+          </div>
+        </div>
+        <div class="contact-panel">
+          <h3>Quick message</h3>
+          <form class="contact-form">
+            <label>
+              Name
+              <input type="text" placeholder="Your name" />
+            </label>
+            <label>
+              Phone or email
+              <input type="text" placeholder="How can Linda reach you?" />
+            </label>
+            <label>
+              What would you like to sell?
+              <textarea rows="3" placeholder="Gold jewellery, coins, ink cartridges, etc."></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary btn-full">Send enquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Linda’s Gold · Triangle Square, Fish Hoek</p>
+      <p>Demo site by Caramel Digital Studio</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
