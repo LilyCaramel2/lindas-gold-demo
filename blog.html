@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog | Linda's Gold</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="lindas-gold.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="index.html" class="logo">Linda's Gold</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="cartridges.html" class="nav-link">Cartridges</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-alt">
+      <div class="container">
+        <h1>From Linda’s notebook</h1>
+        <p class="section-intro">
+          Simple tips to help you get the best value when you sell your gold and keep your printer running smoothly.
+        </p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Is it worth selling this?</h3>
+            <p>
+              How to decide which jewellery and coins are worth bringing in and what to keep for sentimental reasons.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Getting more from your ink</h3>
+            <p>
+              A few small habits that make your ink cartridges last longer and produce cleaner, sharper pages.
+            </p>
+          </article>
+          <article class="card">
+            <h3>What a fair gold offer looks like</h3>
+            <p>
+              A quick overview of how weight and purity affect the price you’re offered for gold and silver.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Linda’s Gold · Triangle Square, Fish Hoek</p>
+      <p>Demo site by Caramel Digital Studio</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
