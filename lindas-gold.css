@@ -1,7 +1,6 @@
 /* ============================
    Base
 ============================ */
-
 :root {
   --bg: #050406;
   --bg-alt: #111018;
@@ -34,7 +33,6 @@ body {
 /* ============================
    Layout helpers
 ============================ */
-
 .container {
   width: min(1100px, 100% - 2.5rem);
   margin-inline: auto;
@@ -51,7 +49,6 @@ body {
 /* ============================
    Header / nav
 ============================ */
-
 .site-header {
   position: sticky;
   top: 0;
@@ -94,7 +91,6 @@ body {
 /* ============================
    HERO – full image, left text
 ============================ */
-
 .hero {
   position: relative;
   min-height: 90vh;
@@ -105,7 +101,6 @@ body {
 }
 
 /* background image */
-
 .hero-image-wrapper {
   position: absolute;
   inset: 0;
@@ -121,7 +116,6 @@ body {
 }
 
 /* overlay – lighter so it doesn't feel like a heavy band */
-
 .hero-overlay {
   position: relative;
   z-index: 1;
@@ -138,13 +132,12 @@ body {
 
 .hero-content {
   padding-block: 5rem 5.3rem;
-  max-width: 760px;   /* was 620px – give the text more room */
+  max-width: 760px; /* was 620px – give the text more room */
 }
 
 /* ============================
    Typography – hero
 ============================ */
-
 .eyebrow {
   font-size: 0.85rem;
   letter-spacing: 0.18em;
@@ -172,7 +165,6 @@ h1 {
 }
 
 /* keep copy short */
-
 .hero-intro {
   margin: 0 0 1.4rem;
   line-height: 1.55;
@@ -194,7 +186,6 @@ h1 {
 /* ============================
    Buttons
 ============================ */
-
 .button {
   display: inline-flex;
   align-items: center;
@@ -220,7 +211,6 @@ h1 {
 /* ============================
    Sections / cards / steps
 ============================ */
-
 .section-header {
   margin-bottom: 2.6rem;
 }
@@ -262,7 +252,6 @@ h1 {
 }
 
 /* Steps */
-
 .steps-list {
   list-style: none;
   padding: 0;
@@ -284,7 +273,6 @@ h1 {
 /* ============================
    Pricing
 ============================ */
-
 .caramel-pricing .card {
   background: rgba(11, 9, 13, 0.96);
 }
@@ -330,7 +318,6 @@ h1 {
 /* ============================
    Contact
 ============================ */
-
 .contact-grid {
   display: grid;
   gap: 2.4rem;
@@ -379,7 +366,6 @@ h1 {
 /* ============================
    Footer
 ============================ */
-
 .site-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding-block: 1.6rem;
@@ -398,7 +384,6 @@ h1 {
 /* ============================
    Responsive tweaks
 ============================ */
-
 @media (max-width: 768px) {
   .nav-bar {
     flex-direction: column;
