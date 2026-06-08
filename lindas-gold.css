@@ -97,7 +97,7 @@ body {
 
 .hero {
   position: relative;
-  min-height: 100vh;              /* tall, full-screen feeling */
+  min-height: 100vh;              /* full-screen feeling */
   display: flex;
   align-items: center;
   color: var(--text);
@@ -119,20 +119,25 @@ body {
   transform: scale(1.02);
 }
 
-/* flat overlay: no gradients, no banding */
+/* very soft bottom fade – no solid band */
 .hero-overlay {
   position: relative;
   z-index: 1;
   width: 100%;
-  background: rgba(5, 4, 6, 0.48);   /* one even layer over the whole image */
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 4, 6, 0.0) 0%,
+    rgba(5, 4, 6, 0.08) 45%,
+    rgba(5, 4, 6, 0.28) 100%
+  );
   display: flex;
   align-items: center;
 }
 
-/* give the hero text lots of space */
+/* hero text area – wide and breathing */
 .hero-content {
   padding-block: 5rem 5.5rem;
-  max-width: 900px;               /* wide, not cramped */
+  max-width: 900px;
 }
 
 /* ============================
@@ -150,17 +155,19 @@ body {
 h1 {
   font-family: "Playfair Display", "Times New Roman", serif;
   font-weight: 600;
-  font-size: 3.8rem;              /* big desktop size */
+  font-size: 4.4rem;          /* big desktop size */
   letter-spacing: 0.03em;
   margin: 0 0 0.6rem;
+  text-align: left;           /* make sure it’s left aligned */
 }
 
 .hero-subheading {
-  font-size: 1.8rem;              /* clear second line */
+  font-size: 1.9rem;                      /* larger */
   font-weight: 500;
   letter-spacing: 0.01em;
-  color: #f8f2e7;
-  margin: 0 0 1.2rem;
+  color: #ffffff;                         /* full white for contrast */
+  text-shadow: 0 0 14px rgba(0, 0, 0, 0.7); /* glow so it pops on image */
+  margin: 0 0 1.3rem;
 }
 
 .hero-intro {
@@ -398,7 +405,7 @@ h1 {
   }
 
   h1 {
-    font-size: 2.6rem;          /* big but controlled on mobile */
+    font-size: 2.7rem;       /* big but controlled on mobile */
   }
 
   .hero-subheading {
