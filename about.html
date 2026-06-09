@@ -1,65 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>About | Linda's Gold</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="lindas-gold.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lindas-gold.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="section-alt">
   <header class="site-header">
     <div class="container nav-bar">
-      <a href="index.html" class="logo">Linda's Gold</a>
+      <a href="index.html" class="logo"><img src="images/gold-wanted-logo.png" alt="Logo"></a>
       <nav class="main-nav">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link active">About</a>
+        <a href="about.html" class="nav-link nav-link-active">About</a>
         <a href="cartridges.html" class="nav-link">Cartridges</a>
-        <a href="blog.html" class="nav-link">Blog</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
-
-  <main>
-    <section class="section section-alt">
-      <div class="container two-column">
-        <div>
-          <h1>About Linda’s Gold</h1>
-          <p class="section-intro">
-            Linda’s Gold is a small, owner-run gold and silver buying shop in Fish Hoek.
-            You deal directly with Linda — no call centres, no fuss.
-          </p>
-          <p>
-            She takes the time to explain what you have, how it’s tested, and how your offer is worked out.
-            If you decide not to sell, you simply take your items home again. No pressure, ever.
-          </p>
-          <p>
-            Her focus is on fair, straightforward offers, instant payment and a calm, private space where
-            you can ask questions without feeling rushed or embarrassed.
-          </p>
-        </div>
-        <div class="highlight-panel">
-          <h3>What Linda buys</h3>
-          <p>
-            • Gold jewellery – even broken chains and single earrings<br />
-            • Silver jewellery and silverware<br />
-            • Coins and Krugerrands<br />
-            • No loose stones or uncertified diamonds
-          </p>
-        </div>
+  <main class="section" style="padding-top: 15rem;">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">Owner-Run</p>
+        <h1>About Linda’s Gold</h1>
+        <p style="font-size: 1.2rem; color: var(--muted ); margin-bottom: 2rem;">Linda’s Gold is a small, owner-run shop in Fish Hoek. You deal directly with Linda — no call centres, no fuss.</p>
+        <p>She takes the time to explain what you have, how it’s tested, and how your offer is worked out. If you decide not to sell, you simply take your items home again. No pressure, ever.</p>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Linda’s Gold · Triangle Square, Fish Hoek</p>
-      <p>Demo site by Caramel Digital Studio</p>
+      <div class="highlight-panel">
+        <h3>What Linda Buys</h3>
+        <ul style="list-style: none; padding: 0; line-height: 2.2; color: var(--accent);">
+          <li>✓ Gold Jewellery (Even broken pieces)</li>
+          <li>✓ Silver Jewellery & Silverware</li>
+          <li>✓ Coins & Krugerrands</li>
+          <li>✓ Estate Jewellery</li>
+        </ul>
+      </div>
     </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  </main>
 </body>
 </html>
