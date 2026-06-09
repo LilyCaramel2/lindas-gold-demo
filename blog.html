@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Blog | Linda's Gold</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="lindas-gold.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lindas-gold.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="section-alt">
   <header class="site-header">
     <div class="container nav-bar">
-      <a href="index.html" class="logo">Linda's Gold</a>
+      <a href="index.html" class="logo"><img src="images/gold-wanted-logo.png" alt="Logo"></a>
       <nav class="main-nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="cartridges.html" class="nav-link">Cartridges</a>
-        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="blog.html" class="nav-link nav-link-active">Blog</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="section section-alt">
-      <div class="container">
-        <h1>From Linda’s notebook</h1>
-        <p class="section-intro">
-          Simple tips to help you get the best value when you sell your gold and keep your printer running smoothly.
-        </p>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Is it worth selling this?</h3>
-            <p>
-              How to decide which jewellery and coins are worth bringing in and what to keep for sentimental reasons.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Getting more from your ink</h3>
-            <p>
-              A few small habits that make your ink cartridges last longer and produce cleaner, sharper pages.
-            </p>
-          </article>
-          <article class="card">
-            <h3>What a fair gold offer looks like</h3>
-            <p>
-              A quick overview of how weight and purity affect the price you’re offered for gold and silver.
-            </p>
-          </article>
-        </div>
+  <main class="section" style="padding-top: 15rem;">
+    <div class="container">
+      <p class="eyebrow">Expertise</p>
+      <h1>From Linda’s Notebook</h1>
+      <p style="color: var(--muted ); font-size: 1.2rem; max-width: 700px; margin-top: 2rem; margin-bottom: 5rem;">
+        Simple tips to help you get the best value when you sell your gold and keep your printer running smoothly.
+      </p>
+
+      <div class="card-grid">
+        <article class="card">
+          <p class="eyebrow" style="font-size: 0.6rem;">Gold Selling</p>
+          <h3>Is it worth selling this?</h3>
+          <p>How to decide which jewellery and coins are worth bringing in and what to keep for sentimental reasons. Linda helps you sort the heirloom from the scrap.</p>
+        </article>
+
+        <article class="card">
+          <p class="eyebrow" style="font-size: 0.6rem;">Ink Care</p>
+          <h3>Getting more from your ink</h3>
+          <p>A few small habits that make your ink cartridges last longer and produce cleaner, sharper pages. Expert advice from the Print Studio.</p>
+        </article>
+
+        <article class="card">
+          <p class="eyebrow" style="font-size: 0.6rem;">Transparency</p>
+          <h3>What a fair gold offer looks like</h3>
+          <p>A quick overview of how weight and purity (karat) affect the price you’re offered. We believe in plain English and no-pressure valuations.</p>
+        </article>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Linda’s Gold · Triangle Square, Fish Hoek</p>
-      <p>Demo site by Caramel Digital Studio</p>
+    <div class="container">
+      <div class="footer-links">
+        <a href="digital-solutions.html">Digital Solutions</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--muted); opacity: 0.6;">© 2026 Linda’s Gold · Windsor House, Fish Hoek</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
