@@ -1,72 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Cartridges | Linda's Gold</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="lindas-gold.css" />
+  <meta charset="UTF-8">
+  <title>Ink Cartridges | Linda's Gold</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lindas-gold.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-bar">
-      <a href="index.html" class="logo">Linda's Gold</a>
+      <a href="index.html" class="logo"><img src="images/gold-wanted-logo.png" alt="Logo"></a>
       <nav class="main-nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="cartridges.html" class="nav-link active">Cartridges</a>
-        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="cartridges.html" class="nav-link nav-link-active">Cartridges</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
-
-  <main>
-    <section class="section">
-      <div class="container two-column">
-        <div>
-          <h1>Ink cartridges &amp; printing</h1>
-          <p class="section-intro">
-            Alongside gold buying, Linda runs a small ink cartridge counter for local homes and
-            small businesses.
-          </p>
-          <p>
-            Bring your empty cartridge or printer model number and Linda will help you match a suitable
-            replacement — without guesswork and without overselling.
-          </p>
-          <ul class="bullet-list">
-            <li>New and compatible cartridges for popular printer brands</li>
-            <li>Helpful advice on what actually works in your printer</li>
-            <li>Local stock for quick top-ups when you’re running low</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Examples of cartridges</h3>
-          <p>
-            This is demo content – change it to what Linda really stocks:
-          </p>
-          <p>
-            • HP DeskJet / OfficeJet cartridges<br />
-            • Canon PIXMA cartridges<br />
-            • Brother inkjet and laser toners
-          </p>
-          <p>
-            For a specific price, send a quick message with your printer model or a photo of your
-            existing cartridge.
-          </p>
-        </div>
+  <main class="section" style="padding-top: 15rem;">
+    <div class="container">
+      <p class="eyebrow">The Print Studio</p>
+      <h2>Premium Ink Solutions</h2>
+      <p style="color: var(--muted ); margin-bottom: 5rem; max-width: 600px;">Top-quality ink cartridges for all major brands. Professional performance, local convenience.</p>
+      <div class="ink-grid">
+        <div class="ink-card"><h3>HP Compatible</h3><p class="ink-price">From R199</p></div>
+        <div class="ink-card"><h3>Canon Compatible</h3><p class="ink-price">From R189</p></div>
+        <div class="ink-card"><h3>Epson Compatible</h3><p class="ink-price">From R149</p></div>
+        <div class="ink-card"><h3>Brother Compatible</h3><p class="ink-price">From R219</p></div>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Linda’s Gold · Triangle Square, Fish Hoek</p>
-      <p>Demo site by Caramel Digital Studio</p>
     </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  </main>
 </body>
 </html>
