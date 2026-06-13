@@ -2,33 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ink Cartridges | Linda's Gold</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ink Cartridges | The Print Studio at Linda's Gold</title>
   <link rel="stylesheet" href="lindas-gold.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-bar">
-      <a href="index.html" class="logo"><img src="images/gold-wanted-logo.png" alt="Logo"></a>
+      <a href="index.html" class="logo"><img src="images/gold-wanted-logo.png" alt="Linda's Gold"></a>
       <nav class="main-nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="cartridges.html" class="nav-link nav-link-active">Cartridges</a>
+        <a href="blog.html" class="nav-link">Blog</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
+
   <main class="section" style="padding-top: 15rem;">
     <div class="container">
       <p class="eyebrow">The Print Studio</p>
-      <h2>Premium Ink Solutions</h2>
-      <p style="color: var(--muted ); margin-bottom: 5rem; max-width: 600px;">Top-quality ink cartridges for all major brands. Professional performance, local convenience.</p>
-      <div class="ink-grid">
-        <div class="ink-card"><h3>HP Compatible</h3><p class="ink-price">From R199</p></div>
-        <div class="ink-card"><h3>Canon Compatible</h3><p class="ink-price">From R189</p></div>
-        <div class="ink-card"><h3>Epson Compatible</h3><p class="ink-price">From R149</p></div>
-        <div class="ink-card"><h3>Brother Compatible</h3><p class="ink-price">From R219</p></div>
+      <h1>Premium Ink Solutions.</h1>
+      <div style="margin-top: 6rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr )); gap: 4rem;">
+        <article class="card" style="background: var(--bg-alt); padding: 3rem; border: 1px solid var(--border);">
+          <h3 style="color: var(--accent);">HP & Canon</h3>
+          <p style="color: var(--muted); margin-top: 1rem;">Full range of high-yield and standard cartridges for home and office printers.</p>
+        </article>
+        <article class="card" style="background: var(--bg-alt); padding: 3rem; border: 1px solid var(--border);">
+          <h3 style="color: var(--accent);">Epson & Brother</h3>
+          <p style="color: var(--muted); margin-top: 1rem;">Specialized ink solutions for professional photo printing and high-volume documents.</p>
+        </article>
+      </div>
+      <div style="margin-top: 6rem; height: 500px; border: 1px solid var(--border); overflow: hidden;">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663737681640/OgO3wSS56mfj.jpg" alt="Ink Cartridges" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
       </div>
     </div>
   </main>
