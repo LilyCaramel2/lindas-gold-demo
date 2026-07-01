@@ -42,7 +42,70 @@ Fish Hoek, 7975
         </div>
       </div>
     </div>
+    <!-- Contact Form Section -->
+    <div style="margin-top: 10rem; padding-top: 6rem; border-top: 1px solid var(--border);">
+      <div style="max-width: 600px;">
+        <p class="eyebrow">Get In Touch</p>
+        <h2>Send us a Message.</h2>
+        <p style="color: var(--muted); margin-top: 2rem; margin-bottom: 3rem;">Have questions about our services? Fill out the form below and we'll get back to you within 24 hours.</p>
+        
+        <form id="contactForm" style="display: flex; flex-direction: column; gap: 2rem;">
+          <div>
+            <label style="display: block; color: var(--text); font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;">Name *</label>
+            <input type="text" name="name" required style="width: 100%; padding: 1rem; background: var(--bg-alt); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 1rem;">
+          </div>
+          <div>
+            <label style="display: block; color: var(--text); font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;">Email *</label>
+            <input type="email" name="email" required style="width: 100%; padding: 1rem; background: var(--bg-alt); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 1rem;">
+          </div>
+          <div>
+            <label style="display: block; color: var(--text); font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;">Phone</label>
+            <input type="tel" name="phone" style="width: 100%; padding: 1rem; background: var(--bg-alt); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 1rem;">
+          </div>
+          <div>
+            <label style="display: block; color: var(--text); font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;">Message *</label>
+            <textarea name="message" required rows="5" style="width: 100%; padding: 1rem; background: var(--bg-alt); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn" style="align-self: flex-start;">Send Message</button>
+          <div id="formMessage" style="display: none; padding: 1rem; margin-top: 1rem; border-radius: 4px;"></div>
+        </form>
+      </div>
+    </div>
   </main>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const messageDiv = document.getElementById('formMessage');
+      
+      try {
+        const response = await fetch('contact-handler.php', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const data = await response.json();
+        messageDiv.style.display = 'block';
+        
+        if (response.ok) {
+          messageDiv.style.backgroundColor = 'rgba(184, 134, 11, 0.1)';
+          messageDiv.style.color = 'var(--accent)';
+          messageDiv.textContent = data.success;
+          this.reset();
+        } else {
+          messageDiv.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+          messageDiv.style.color = '#ff6b6b';
+          messageDiv.textContent = data.error;
+        }
+      } catch (error) {
+        messageDiv.style.display = 'block';
+        messageDiv.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+        messageDiv.style.color = '#ff6b6b';
+        messageDiv.textContent = 'Error sending message. Please try again.';
+      }
+    });
+  </script>
 
   <footer class="site-footer">
     <div class="container">
