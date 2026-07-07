@@ -29,28 +29,32 @@
     </div>
   </header>
 
-  <main style="padding-top: 10rem;">
+  <main>
     <!-- Contact Hero -->
-    <section>
-      <div class="container">
+    <section class="hero" style="height: 60vh; background-image: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.6)), url('assets/images/contact-hero.jpg'); background-size: cover; background-position: center; margin-top: 80px;">
+      <div class="container hero-content">
         <p class="eyebrow">Connect With Us</p>
         <h1>Let's Talk.</h1>
-        <p style="font-size: 1.4rem; margin-top: 1rem;">Whether you're looking for a valuation or printer supplies, our studio doors are open for professional service.</p>
+      </div>
+    </section>
+
+    <section style="padding-top: 6rem;">
+      <div class="container">
+        <p style="font-size: 1.4rem; max-width: 800px;">Whether you're looking for a valuation or printer supplies, our studio doors are open for professional service.</p>
       </div>
     </section>
 
     <!-- Two-Column Layout -->
     <section class="fluid-band">
       <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr )); gap: 6rem; align-items: start;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 6rem; align-items: start;">
           
           <!-- Details Side -->
           <div>
             <div style="margin-bottom: 4rem;">
               <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">The Studio</h2>
               <p style="color: var(--text-pure); font-size: 1.2rem; line-height: 1.4;">
-                Triangle Square, 5 De Waal Road  
-
+                Triangle Square, 5 De Waal Road  <br>
                 Fish Hoek, Cape Town, 7975
               </p>
             </div>
@@ -58,7 +62,7 @@
             <div style="margin-bottom: 4rem; display: grid; gap: 2rem;">
               <div>
                 <p class="eyebrow" style="margin-bottom: 0.5rem; font-size: 0.65rem;">WhatsApp Consultation</p>
-                <a href="https://wa.me/27823727597" style="color: var(--gold ); font-size: 1.5rem; text-decoration: none; font-weight: 700;">+27 82 372 7597</a>
+                <a href="https://wa.me/27823727597" style="color: var(--gold); font-size: 1.5rem; text-decoration: none; font-weight: 700;">+27 82 372 7597</a>
               </div>
               <div>
                 <p class="eyebrow" style="margin-bottom: 0.5rem; font-size: 0.65rem;">Studio Landline</p>
@@ -92,7 +96,7 @@
             <p style="margin: 0 auto;">Our team will respond to your inquiry within 24 hours.</p>
           </div>
 
-          <div class="contact-form-wrapper" style="border-color: var(--silver );">
+          <div class="contact-form-wrapper" style="border-color: var(--silver);">
             <form id="mainContactForm">
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                 <div class="form-group" style="margin-bottom: 0;">
@@ -175,7 +179,7 @@
   </a>
 
   <script>
-    document.getElementById('mainContactForm' ).addEventListener('submit', function(e) {
+    document.getElementById('mainContactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const status = document.getElementById('formStatus');
       status.style.display = 'block';
