@@ -5,12 +5,12 @@
   <title>Contact Us | Linda's Gold Fish Hoek</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Visit Linda's Gold at Triangle Square, Fish Hoek. Contact us for professional gold and silver valuations, immediate payment, and printer ink solutions.">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="lindas-gold.css">
 </head>
 <body>
@@ -31,7 +31,7 @@
 
   <main>
     <!-- Contact Hero -->
-    <section class="hero" style="height: 60vh; background-image: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.6)), url('assets/images/contact-hero.jpg'); background-size: cover; background-position: center; margin-top: 80px;">
+    <section class="hero" style="height: 60vh; background-image: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.6)), url('assets/images/gw-contact-hero-1600x900.jpg'); background-size: cover; background-position: center; margin-top: 80px;">
       <div class="container hero-content">
         <p class="eyebrow">Connect With Us</p>
         <h1>Let's Talk.</h1>
@@ -48,9 +48,13 @@
     <section class="fluid-band">
       <div class="container">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 6rem; align-items: start;">
-          
+
           <!-- Details Side -->
           <div>
+            <div style="margin-bottom: 4rem; border: 1px solid var(--border-silver); overflow: hidden; background: var(--bg-surface);">
+              <img src="assets/images/gw-spare-shopfront-800x800.jpg" alt="Linda's Gold shop front" style="width: 100%; height: auto; display: block;">
+            </div>
+
             <div style="margin-bottom: 4rem;">
               <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">The Studio</h2>
               <p style="color: var(--text-pure); font-size: 1.2rem; line-height: 1.4;">
@@ -108,7 +112,7 @@
                   <input type="email" id="email" name="email" class="form-control" required>
                 </div>
               </div>
-              
+
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                 <div class="form-group" style="margin-bottom: 0;">
                   <label for="phone">Phone Number</label>
@@ -185,7 +189,7 @@
       status.style.display = 'block';
       status.style.color = 'var(--gold)';
       status.textContent = 'Sending message...';
-      
+
       setTimeout(() => {
         status.textContent = 'Thank you. Your message has been sent successfully.';
         this.reset();
