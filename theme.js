@@ -10,6 +10,9 @@
     : (saved || (systemLight ? 'light' : 'dark'));
 
   function labelFor(theme) {
+    if (root.lang === 'af') {
+      return theme === 'light' ? 'Gebruik donker skerm' : 'Gebruik ligte skerm';
+    }
     return theme === 'light' ? 'Use dark screen' : 'Use light screen';
   }
 
@@ -21,9 +24,10 @@
       button.querySelector('[data-appearance-label]').textContent = labelFor(theme);
     });
     document.querySelectorAll('link[rel~="icon"]').forEach(function (icon) {
+      var prefix = root.dataset.assetPrefix || '';
       icon.href = theme === 'light'
-        ? 'images/brand/gw-favicon-lightbg-tpt-gptpng.png'
-        : 'images/brand/gw-favicon-darkbg-gpt.png';
+        ? prefix + 'images/brand/gw-favicon-lightbg-tpt-gptpng.png'
+        : prefix + 'images/brand/gw-favicon-darkbg-gpt.png';
     });
   }
 
