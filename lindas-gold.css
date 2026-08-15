@@ -45,6 +45,12 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.25rem); }
 h3 { font-size: clamp(1.55rem, 3vw, 2rem); }
 p { margin: 0 0 1.15rem; }
 
+/* Dark display type: use the lighter supplied Cormorant weight so large headings retain refinement against navy. */
+:root:not([data-theme="light"]) h1,
+:root:not([data-theme="light"]) h2,
+:root:not([data-theme="light"]) h3,
+:root:not([data-theme="light"]) h4 { font-weight: 500; }
+
 /* Header and logo */
 .site-header { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid rgba(238,241,246,.12); background: #05162c; backdrop-filter: blur(18px); }
 .site-header::after { position: absolute; right: 8%; bottom: -1px; left: 8%; height: 1px; background: linear-gradient(90deg, transparent, var(--harbour-light), transparent); box-shadow: 0 0 13px rgba(38,155,255,.7); content: ""; }
