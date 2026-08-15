@@ -102,7 +102,10 @@ p { margin: 0 0 1.15rem; }
 .hero-language-link span { color: var(--gold); font-size: .61rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
 .hero-language-link a { color: var(--silver); text-decoration: underline; text-decoration-color: rgba(38,155,255,.85); text-decoration-thickness: 1px; text-underline-offset: .28rem; }
 .hero-language-link a:hover, .hero-language-link a:focus-visible { color: var(--gold); outline: none; }
-.hero--home { min-height: min(790px, calc(100vh - 78px)); background-position: center; background-image: linear-gradient(270deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.78) 32%, rgba(5,22,44,.24) 54%, rgba(5,22,44,.02) 74%), url("images/gw-home-hero-1600x900.png"); }
+/* Dark home hero: preserve the protected shop scene and people; use shadowed text, not a heavy right-side navy veil, for readable copy. */
+.hero--home { min-height: min(790px, calc(100vh - 78px)); background-position: center; background-image: linear-gradient(270deg, rgba(5,22,44,.46) 0%, rgba(5,22,44,.28) 27%, rgba(5,22,44,.1) 53%, rgba(5,22,44,.01) 76%), url("images/gw-home-hero-1600x900.png"); }
+.hero--home h1 { text-shadow: 0 2px 18px rgba(5,22,44,.64); }
+.hero--home .hero-content > p:not(.eyebrow) { text-shadow: 0 2px 14px rgba(5,22,44,.68); }
 .hero--home .hero-content { width: min(43%, 610px); margin-left: auto; }
 .hero--cartridges { background-image: linear-gradient(90deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.72) 55%, rgba(5,22,44,.24) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
 .hero--journal { background-image: linear-gradient(90deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.65) 55%, rgba(5,22,44,.26) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
