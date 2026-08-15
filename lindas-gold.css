@@ -177,3 +177,12 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   .footer-bottom, .cookie-banner { flex-direction: column; }
   .cookie-banner { left: .7rem; right: .7rem; bottom: .7rem; }
 }
+
+/* Mobile navigation: single horizontal row of clear touch targets without changing the protected logo artwork. */
+@media (max-width: 620px) {
+  .nav-bar { display: grid; grid-template-columns: 1fr; gap: .45rem; }
+  .main-nav { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: .45rem; padding: 0 0 .15rem; }
+  .nav-link { display: inline-flex; flex: 0 0 auto; align-items: center; min-height: 40px; padding: .55rem .7rem; border: 1px solid rgba(238,241,246,.16); border-radius: .55rem; background: rgba(13,43,76,.32); font-size: .61rem; letter-spacing: .07em; }
+  .nav-link::after { display: none; }
+  .nav-link-active { border-color: rgba(213,194,140,.6); color: var(--gold); }
+}
