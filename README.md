@@ -1,119 +1,53 @@
-Linda’s Gold – Production HTML/CSS Site
-======================================
+# Gold Wanted — Ink, Toner & Jewellery Buyers in Fish Hoek
 
-This repository contains the production website for **Linda’s Gold**, a gold and silver buyer based in Fish Hoek, Cape Town.
+Gold Wanted is a local Fish Hoek business website managed by **Lily Godden of Caramel Digital Studio** for **Linda Hafkamp and Brendan**. The website leads with ink cartridges, refills and toner for local homes, offices, shops and small businesses. It also explains the secondary gold and silver jewellery-buying service.
 
-The site is built in **plain HTML and CSS**, with a small PHP contact handler.  
-It is designed as a clear, inspectable web presence that can also serve as a content and layout seed for future framework-based implementations such as Gaia / Next.js / SOL-001.
+The public production site is [www.goldwantedfishhoek.co.za](https://www.goldwantedfishhoek.co.za/). Vercel deploys the `main` branch.
 
-Live deployment
----------------
+> **Production rule:** Do not change `main` without Lily Godden’s explicit approval for the exact release. Lily is the default approval and release authority for this Caramel-managed project. Build and validate on a descriptive review branch first.
 
-The site is deployed to Vercel from this repository:
+## Technology
 
-`https://lindas-gold-demo.vercel.app/`
+This is a deliberately inspectable static site. It uses HTML5, the shared `lindas-gold.css` stylesheet, vanilla JavaScript for appearance, consent and WhatsApp-form behaviour, plus the legacy `contact-handler.php`. There is no React, framework or build step.
 
-Content and structure in this repo mirror what is live, making it straightforward to maintain and to port into other stacks when required.
+| Resource | Purpose |
+|---|---|
+| `index.html` | Balanced Ink & Gold homepage with protected local-service hero. |
+| `cartridges.html` | Ink cartridges, refills and toner service page. |
+| `blog.html` and eight guide pages | Four ink guides and four jewellery guides with matching editorial images and audio. |
+| `podcasts.html` and `audio/` | English audio-guide library plus a short Afrikaans contact guide. |
+| `af/` | Approved Afrikaans Home, Ink & Toner, Find Us and Audio pages. |
+| `lindas-gold.css` | Global navy, silver-white, warm-gold and Harbour Light Blue design system, including light/dark appearance. |
+| `theme.js`, `cookie-consent.js`, `contact-form.js` | Appearance preference, storage-safe consent choice and WhatsApp enquiry behaviour. |
+| `sitemap.xml`, `robots.txt` | Search-route control. |
 
-What the site provides
-----------------------
+## Essential project rules
 
-The site is a multi-page brochure and journal for Linda’s Gold, including:
+Read [`AGENTS.md`](AGENTS.md) before editing. It includes the business facts, no-stock-promise rule, protected asset policy, reviewed-language policy and pre-approval checks.
 
-- A home page that explains what Linda buys, how the process works, and how to get in touch.
-- An About page with local context and business story.
-- A blog called **The Gold & Silver Journal** with four long-form articles:
-  - Selling heirloom jewellery while respecting sentimental value.
-  - How silver bullion, coins and jewellery are valued.
-  - How current gold market trends in 2026 relate to selling decisions.
-  - How to clean and store gold and silver jewellery safely.
-- A Cartridges page dedicated to ink and toner enquiries as a separate content silo.
-- A Contact page with address, hours, contact details and a working form.
-- A Privacy & Cookies Policy page tailored to Linda’s Gold.
+The asset and workflow references are:
 
-Pages
------
+| Need | Read |
+|---|---|
+| Complete brand-first local-business site delivery | [`skills/caramel-local-business-site-delivery/SKILL.md`](skills/caramel-local-business-site-delivery/SKILL.md) |
+| Gold Wanted’s full homepage, conversion and integration structure | [`docs/GOLD-WANTED-COMPONENT-BLUEPRINT.md`](docs/GOLD-WANTED-COMPONENT-BLUEPRINT.md) |
+| Exact image, logo and audio use | [`docs/ASSET-REGISTER.md`](docs/ASSET-REGISTER.md) |
+| Agent skills and recurring workflows | [`docs/WORKFLOW-SKILLS.md`](docs/WORKFLOW-SKILLS.md) |
+| Static website maintenance | [`skills/gold-wanted-static-maintenance/SKILL.md`](skills/gold-wanted-static-maintenance/SKILL.md) |
+| Content and localisation work | [`skills/gold-wanted-content-localisation/SKILL.md`](skills/gold-wanted-content-localisation/SKILL.md) |
 
-`index.html` – Home  
-Primary landing page with hero content, what Linda buys, how the process works, areas served, and call-to-action elements.
+## Key business facts
 
-`about.html` – About  
-Provides Linda’s background, trust signals, and details on the types of items she buys.
+Gold Wanted is at **Shop 5, Triangle Square, 5 De Waal Rd, Fish Hoek**, behind Shoprite. WhatsApp is **082 372 7597**. Confirmed ink coverage is Canon, HP, Brother, Lexmark and Samsung. Use “Ask us to check availability” rather than a stock promise.
 
-`cartridges.html` – Ink cartridges  
-Information page for local printer ink and toner enquiries, separate from the gold and silver journal.
+The jewellery service accepts gold and silver jewellery and selected household silver. Do not claim that Kruger Rands, coins or bullion are accepted. Sellers need an ID or passport. Stones are returned where possible.
 
-`blog.html` – Blog / The Gold & Silver Journal  
-Blog index introducing four expert articles, each linked to its own dedicated page.
+English is the default language. Afrikaans core routes are approved; use **inkpatroon** for an ink cartridge. Hold isiXhosa, isiZulu and Sesotho publication until independent native-speaker review.
 
-`contact.html` – Contact  
-Lists address, hours and contact details, and includes a contact form handled by `contact-handler.php`.
+## Content standard
 
-`privacy.html` – Privacy & Cookies Policy  
-Describes how Linda’s Gold handles personal information, enquiries and website data.
+Use UK/SA spelling, including **jewellery**. Write short, direct, human sentences. Avoid unsupported SEO figures, invented reviews, stock promises, inflated marketing language and generic AI phrasing.
 
-`selling-your-heirloom-jewellery.html` – Guide  
-Explains how to sell heirloom jewellery in Fish Hoek while honouring sentimental value and, when appropriate, keeping stones while selling the metal.
+## Maintainers
 
-`how-we-value-your-silver.html` – Valuation  
-Details how silver bullion, coins and silver jewellery are assessed and valued locally, including purity, weight and market context.
-
-`is-now-a-good-time-to-sell-gold-in-fish-hoek.html` – Market Trends  
-Explores how current gold market conditions in 2026 relate to selling gold items in Fish Hoek, and how timing and item type influence decisions.
-
-`how-to-clean-and-store-gold-and-silver-jewellery-safely.html` – Maintenance  
-Offers practical guidance on cleaning and storing gold and silver jewellery safely to help avoid tarnish, scratches, moisture damage and everyday wear.
-
-`digital-solutions.html` – Digital Solutions  
-Describes digital and online aspects of Linda’s service and outlines future integration points.
-
-Tech stack
-----------
-
-- **HTML5** – structured documents and routes.
-- **CSS** – single stylesheet (`lindas-gold.css`) controlling layout and visual language.
-- **PHP** – minimal `contact-handler.php` for form submissions.
-- Hosted on **GitHub**, deployed to **Vercel**.
-
-The current implementation does not require a build step.  
-Future frameworks (for example Next.js or Gaia Vedica Akasha SOL-001) can use this repository as a content and routing reference.
-
-Architecture and future migration
----------------------------------
-
-The repository layout is intentionally simple:
-
-```txt
-lindas-gold-demo/
-├── index.html
-├── about.html
-├── cartridges.html
-├── blog.html
-├── contact.html
-├── privacy.html
-├── selling-your-heirloom-jewellery.html
-├── how-we-value-your-silver.html
-├── is-now-a-good-time-to-sell-gold-in-fish-hoek.html
-├── how-to-clean-and-store-gold-and-silver-jewellery-safely.html
-├── digital-solutions.html
-├── lindas-gold.css
-├── contact-handler.php
-├── robots.txt
-├── sitemap.xml
-└── images/
-```
-
-A separate, private GitHub repository holds the Gaia Vedica Akasha **SOL-001 motherseed**.  
-When that stack is ready for use, this repo provides:
-
-- The canonical content source.
-- The routing blueprint (URLs and content silos).
-- The reference visual language for the Linda’s Gold front-end.
-
-Credits
--------
-
-Concept, content and HTML/CSS structure by **Caramel Digital Studio**.  
-Commissioned for **Linda’s Gold**, a gold and silver buyer in Fish Hoek, Cape Town.
-
-This repository keeps the work visible, cloneable, and ready for whatever the next layer of infrastructure needs to do.
+Site management, design and content workflow: **Caramel Digital Studio**. Business owner: **Linda Hafkamp**.
