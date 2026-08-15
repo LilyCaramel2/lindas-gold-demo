@@ -1,0 +1,15 @@
+{
+  "name": "Gold Wanted — Linda's Ink & Gold, Fish Hoek",
+  "short_name": "Gold Wanted",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05162c",
+  "theme_color": "#05162c",
+  "icons": [
+    {
+      "src": "images/brand/gw-favicon-lightbg-tpt-gptpng.png",
+      "sizes": "1254x1254",
+      "type": "image/png"
+    }
+  ]
+}

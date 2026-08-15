@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://lindas-gold-demo.vercel.app/index.html</loc><priority>1.0</priority></url>
-  <url><loc>https://lindas-gold-demo.vercel.app/about.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lindas-gold-demo.vercel.app/cartridges.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lindas-gold-demo.vercel.app/blog.html</loc><priority>0.7</priority></url>
-  <url><loc>https://lindas-gold-demo.vercel.app/contact.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/about.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/cartridges.html</loc><priority>0.9</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/selling-your-heirloom-jewellery.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/contact.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/blog.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/check-ink-and-toner-locally-in-fish-hoek.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/how-to-identify-the-right-ink-cartridge-or-toner.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/printer-supplies-for-fish-hoek-small-businesses.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/refill-or-replacement-for-your-printer.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/how-we-value-your-silver.html</loc><priority>0.6</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/is-now-a-good-time-to-sell-gold-in-fish-hoek.html</loc><priority>0.6</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/how-to-clean-and-store-gold-and-silver-jewellery-safely.html</loc><priority>0.6</priority></url>
+  <url><loc>https://www.goldwantedfishhoek.co.za/privacy.html</loc><priority>0.3</priority></url>
 </urlset>

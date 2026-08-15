@@ -16,6 +16,21 @@
   --shadow: 0 24px 65px rgba(0, 0, 0, .3);
 }
 
+/* Light appearance: keep the same Gold Wanted navy, silver-white and warm-gold hierarchy on a paper-cream screen. */
+:root[data-theme="light"] {
+  --ink-950: #f4efe4;
+  --ink-900: #eef1f6;
+  --ink-800: #e4ebf2;
+  --ink-700: #cad8e7;
+  --silver: #192d44;
+  --silver-muted: #536476;
+  --paper: #f4efe4;
+  --paper-ink: #192d44;
+  --line: rgba(25, 45, 68, .16);
+  --glass: rgba(255, 255, 255, .62);
+  --shadow: 0 20px 52px rgba(25, 45, 68, .14);
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--ink-950); color: var(--silver-muted); font-family: "Manrope", Arial, sans-serif; line-height: 1.6; }
@@ -36,6 +51,11 @@ p { margin: 0 0 1.15rem; }
 .nav-bar { display: flex; align-items: center; justify-content: space-between; min-height: 78px; gap: 2rem; }
 .brand-lockup, .logo { display: inline-flex; align-items: center; gap: .65rem; color: var(--silver); font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.5rem; line-height: .95; }
 .brand-lockup img, .logo-mark { width: 46px; height: 46px; border-radius: 50%; box-shadow: 0 0 18px rgba(38,155,255,.2); }
+.brand-lockup--artwork { width: min(280px, 28vw); min-width: 180px; height: 66px; gap: 0; flex-shrink: 0; }
+.brand-lockup--artwork .brand-art { width: 100%; height: 66px; border-radius: 0; object-fit: contain; object-position: left center; box-shadow: none; }
+.brand-art--light { display: none; }
+:root[data-theme="light"] .brand-art--dark { display: none; }
+:root[data-theme="light"] .brand-art--light { display: block; }
 .brand-lockup span { display: grid; }
 .brand-lockup strong { color: var(--gold); font-weight: 600; }
 .brand-lockup b { color: var(--silver); font-weight: 600; }
@@ -45,6 +65,9 @@ p { margin: 0 0 1.15rem; }
 .nav-link::after { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: var(--gold); content: ""; transform: scaleX(0); transition: transform 180ms ease-out; }
 .nav-link:hover, .nav-link-active { color: var(--silver); }
 .nav-link:hover::after, .nav-link-active::after { transform: scaleX(1); }
+.appearance-toggle { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; gap: .42rem; padding: .52rem .68rem; border: 1px solid rgba(238,241,246,.2); border-radius: .55rem; background: rgba(13,43,76,.28); color: var(--silver-muted); font: inherit; font-size: .58rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; cursor: pointer; }
+.appearance-toggle:hover, .appearance-toggle:focus-visible { border-color: var(--gold); color: var(--gold); outline: none; }
+.appearance-toggle__mark { color: var(--gold); font-size: .95rem; line-height: 1; }
 
 /* Actions */
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .8rem 1.1rem; border: 1px solid transparent; border-radius: .72rem; font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: transform 160ms ease-out, border-color 160ms ease-out, background 160ms ease-out; }
@@ -153,15 +176,30 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 .footer-links a:hover { color: var(--gold); }
 .footer-bottom { display: flex; justify-content: space-between; gap: 1rem; padding: 1.35rem 0; border-top: 1px solid var(--line); color: #7f8da0; font-size: .7rem; text-transform: uppercase; }
 .cookie-banner { position: fixed; z-index: 100; right: 1rem; bottom: 1rem; left: 1rem; display: flex; justify-content: space-between; gap: 1rem; padding: 1rem 1.2rem; border: 1px solid var(--line); border-radius: .85rem; background: rgba(5,22,44,.96); box-shadow: var(--shadow); }
+.cookie-actions { display: flex; align-items: end; justify-content: flex-end; gap: .55rem; flex-wrap: wrap; }
 .cookie-content p { margin: 0; font-size: .8rem; }
 .cookie-actions { display: flex; gap: .5rem; }
 .btn-cookie { min-height: 38px; padding: .5rem .75rem; font-size: .62rem; }
+
+:root[data-theme="light"] .site-header { background: rgba(244,239,228,.92); }
+:root[data-theme="light"] .site-footer { background: #e4ebf2; }
+:root[data-theme="light"] .site-footer p, :root[data-theme="light"] .footer-links a, :root[data-theme="light"] .footer-bottom { color: #536476; }
+:root[data-theme="light"] .hero--home { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.91) 52%, rgba(244,239,228,.42) 100%), url("images/gw-home-hero-1600x900.png"); }
+:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.86) 55%, rgba(244,239,228,.42) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
+:root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.82) 55%, rgba(244,239,228,.4) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
+:root[data-theme="light"] .hero-content > p:not(.eyebrow), :root[data-theme="light"] .hero-trust, :root[data-theme="light"] .service-item p, :root[data-theme="light"] .journal-feature p, :root[data-theme="light"] .journal-list p, :root[data-theme="light"] .article-shell p, :root[data-theme="light"] .photo-split__content p, :root[data-theme="light"] .location-panel p { color: #536476; }
+:root[data-theme="light"] .photo-split { background: linear-gradient(135deg, rgba(255,255,255,.94), rgba(228,235,242,.9)); }
+:root[data-theme="light"] .location-panel { background: linear-gradient(135deg, rgba(38,155,255,.12), rgba(255,255,255,.76)); }
+:root[data-theme="light"] .cookie-banner { background: rgba(244,239,228,.97); color: var(--paper-ink); }
+:root[data-theme="light"] .appearance-toggle { border-color: rgba(25,45,68,.18); background: rgba(255,255,255,.58); }
 
 @media (max-width: 800px) {
   .container { width: min(100% - 2rem, 1160px); }
   .nav-bar { min-height: 68px; align-items: flex-start; padding: .8rem 0; }
   .brand-lockup small { display: none; }
   .brand-lockup img { width: 40px; height: 40px; }
+  .brand-lockup--artwork { width: min(230px, 62vw); min-width: 150px; height: 54px; }
+  .brand-lockup--artwork .brand-art { height: 54px; }
   .main-nav { gap: .55rem .9rem; padding-top: .3rem; }
   .nav-link { font-size: .57rem; }
   .hero { min-height: 570px; }
@@ -181,8 +219,14 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 /* Mobile navigation: single horizontal row of clear touch targets without changing the protected logo artwork. */
 @media (max-width: 620px) {
   .nav-bar { display: grid; grid-template-columns: 1fr; gap: .45rem; }
+  .brand-lockup--artwork { width: min(255px, 76vw); height: 58px; }
+  .brand-lockup--artwork .brand-art { height: 58px; }
   .main-nav { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: .45rem; padding: 0 0 .15rem; }
   .nav-link { display: inline-flex; flex: 0 0 auto; align-items: center; min-height: 40px; padding: .55rem .7rem; border: 1px solid rgba(238,241,246,.16); border-radius: .55rem; background: rgba(13,43,76,.32); font-size: .61rem; letter-spacing: .07em; }
   .nav-link::after { display: none; }
   .nav-link-active { border-color: rgba(213,194,140,.6); color: var(--gold); }
+  .appearance-toggle { min-height: 40px; padding: .55rem .7rem; font-size: .58rem; }
+  .cookie-banner { right: .6rem; bottom: .6rem; left: .6rem; display: block; padding: .8rem .9rem; }
+  .cookie-banner p { margin-bottom: .5rem; }
+  .cookie-actions { justify-content: flex-start; margin-top: .65rem; }
 }
