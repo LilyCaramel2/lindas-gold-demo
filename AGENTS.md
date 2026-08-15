@@ -18,7 +18,7 @@ The site is deliberately simple: **HTML5, one shared CSS file, vanilla JavaScrip
 |---|---|---|
 | Global design | `lindas-gold.css` | Keep the Gold Wanted dark-navy, silver-white, warm-gold and Harbour Light Blue design system. Add a short design-intent comment before a new component or visual section. |
 | Theme control | `theme.js` | Preserve the light/dark appearance toggle and supplied matching logo artwork. |
-| Cookie choice | `cookie-consent.js` | Essential and Analytics choices must dismiss the banner even if browser storage is restricted. GA4 is not active until a Measurement ID is supplied. |
+| Cookie choice | `cookie-consent.js` | Essential and Analytics choices must dismiss the banner even if browser storage is restricted. GA4 Measurement ID `G-N67SRPL2BS` must load only after Analytics consent. Track only non-personal WhatsApp, directions, form, audio and language actions. |
 | Enquiries | `contact-form.js` | The published flow opens a customer-controlled WhatsApp message. Do not claim that an email form submits automatically. |
 | Search routes | `sitemap.xml`, `robots.txt` | Keep canonical URLs, English/Afrikaans `hreflang` entries and sitemap routes aligned whenever a public page changes. |
 
