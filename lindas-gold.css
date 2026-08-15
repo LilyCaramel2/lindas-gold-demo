@@ -46,16 +46,19 @@ h3 { font-size: clamp(1.55rem, 3vw, 2rem); }
 p { margin: 0 0 1.15rem; }
 
 /* Header and logo */
-.site-header { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid rgba(238,241,246,.12); background: rgba(5,22,44,.9); backdrop-filter: blur(18px); }
+.site-header { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid rgba(238,241,246,.12); background: #05162c; backdrop-filter: blur(18px); }
 .site-header::after { position: absolute; right: 8%; bottom: -1px; left: 8%; height: 1px; background: linear-gradient(90deg, transparent, var(--harbour-light), transparent); box-shadow: 0 0 13px rgba(38,155,255,.7); content: ""; }
-.nav-bar { display: flex; align-items: center; justify-content: space-between; min-height: 78px; gap: 2rem; }
+.nav-bar { display: flex; align-items: center; justify-content: space-between; min-height: 92px; gap: 2rem; }
 .brand-lockup, .logo { display: inline-flex; align-items: center; gap: .65rem; color: var(--silver); font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.5rem; line-height: .95; }
 .brand-lockup img, .logo-mark { width: 46px; height: 46px; border-radius: 50%; box-shadow: 0 0 18px rgba(38,155,255,.2); }
-.brand-lockup--artwork { width: min(280px, 28vw); min-width: 180px; height: 66px; gap: 0; flex-shrink: 0; }
-.brand-lockup--artwork .brand-art { width: 100%; height: 66px; border-radius: 0; object-fit: contain; object-position: left center; box-shadow: none; }
+.brand-lockup--artwork { width: min(340px, 29vw); min-width: 250px; height: 82px; gap: 0; flex-shrink: 0; }
+.brand-lockup--artwork .brand-art { width: 100%; height: 82px; border-radius: 0; object-fit: contain; object-position: left center; box-shadow: none; }
 .brand-art--light { display: none; }
 :root[data-theme="light"] .brand-art--dark { display: none; }
 :root[data-theme="light"] .brand-art--light { display: block; }
+/* The supplied dark banner has generous transparent canvas above and below its navy lock-up. Scale its displayed canvas only; the protected source file stays untouched. */
+:root:not([data-theme="light"]) .nav-bar { min-height: 116px; }
+:root:not([data-theme="light"]) .brand-lockup--artwork .brand-art--dark { transform: scale(1.55); transform-origin: left center; }
 .brand-lockup span { display: grid; }
 .brand-lockup strong { color: var(--gold); font-weight: 600; }
 .brand-lockup b { color: var(--silver); font-weight: 600; }
@@ -99,6 +102,13 @@ p { margin: 0 0 1.15rem; }
 .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(5,22,44,.97) 0%, rgba(5,22,44,.88) 39%, rgba(5,22,44,.18) 100%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
 .hero-logo { position: absolute; right: max(4vw, 2rem); bottom: 3.5rem; width: 150px; padding: .9rem; border: 1px solid var(--line); border-radius: 1rem; background: rgba(5,22,44,.55); box-shadow: var(--shadow); backdrop-filter: blur(12px); }
 .hero-logo img { border-radius: 50%; }
+.hero-visit-card { position: absolute; right: max(4vw, 2rem); bottom: 3.5rem; display: grid; grid-template-columns: 46px 1fr auto; gap: .75rem; align-items: center; width: min(285px, calc(100% - 3rem)); padding: .75rem .9rem; border: 1px solid rgba(213,194,140,.55); border-radius: .9rem; background: rgba(5,22,44,.78); box-shadow: var(--shadow); backdrop-filter: blur(12px); transition: transform 160ms ease-out, border-color 160ms ease-out; }
+.hero-visit-card:hover, .hero-visit-card:focus-visible { border-color: var(--harbour-light); outline: none; transform: translateY(-2px); }
+.hero-visit-card img { width: 46px; height: 46px; border-radius: 50%; }
+.hero-visit-card span { display: grid; gap: .08rem; }
+.hero-visit-card b { color: var(--silver); font-size: .73rem; letter-spacing: .09em; text-transform: uppercase; }
+.hero-visit-card small { color: var(--gold); font-size: .68rem; font-weight: 800; }
+.hero-visit-card strong { color: var(--gold); font-size: 1.25rem; }
 
 /* Refocused sections */
 .section { padding: 6.5rem 0; }
@@ -137,17 +147,22 @@ p { margin: 0 0 1.15rem; }
 .location-panel h3 { font-size: 2.1rem; }
 .location-panel p { color: var(--silver-muted); }
 
-/* Journal */
-.journal-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
-.journal-feature { overflow: hidden; border: 1px solid var(--line); border-radius: 1.3rem; background: var(--ink-800); }
-.journal-feature__image { height: 285px; background: url("images/gw-blog-caring-for-assets-1200x675.png") center/cover; }
-.journal-feature__copy { padding: 2rem; }
-.journal-feature p { color: var(--silver-muted); }
-.journal-list { display: grid; gap: .9rem; }
-.journal-list article { display: grid; grid-template-columns: 36px 1fr; gap: .9rem; padding: 1.25rem; border: 1px solid var(--line); border-radius: 1rem; background: rgba(17,53,90,.34); }
-.journal-list article::before { color: var(--harbour-light); content: "◌"; font-size: 1.55rem; line-height: 1; }
-.journal-list h3 { margin-bottom: .35rem; font-size: 1.55rem; }
-.journal-list p { margin: 0; color: var(--silver-muted); font-size: .86rem; }
+/* Journal: image-led editorial cards use supplied photos rather than decorative placeholders. */
+.journal-section { position: relative; }
+.journal-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1.1rem; }
+.journal-card { display: grid; grid-column: span 4; overflow: hidden; min-height: 100%; border: 1px solid var(--line); border-radius: 1.25rem; background: linear-gradient(145deg, rgba(17,53,90,.44), rgba(5,22,44,.14)); box-shadow: var(--shadow); transition: transform 180ms ease-out, border-color 180ms ease-out, box-shadow 180ms ease-out; }
+.journal-card--lead { grid-column: span 6; }
+.journal-card:hover, .journal-card:focus-visible { border-color: rgba(213,194,140,.72); box-shadow: 0 25px 56px rgba(0,0,0,.3); outline: none; transform: translateY(-4px); }
+.journal-card__media { height: 220px; overflow: hidden; background: var(--ink-800); }
+.journal-card--lead .journal-card__media { height: 300px; }
+.journal-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms cubic-bezier(.23,1,.32,1); }
+.journal-card:hover .journal-card__media img { transform: scale(1.045); }
+.journal-card__body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 1.35rem 1.4rem 1.55rem; }
+.journal-card__body .article-tag { margin-bottom: .7rem; }
+.journal-card__body h3 { margin-bottom: .7rem; font-size: clamp(1.8rem, 2.8vw, 2.55rem); }
+.journal-card__body p:not(.article-tag) { margin: 0; color: var(--silver-muted); font-size: .87rem; }
+.journal-card__link { margin-top: 1.25rem; color: var(--gold); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.journal-section__action { margin: 2rem 0 0; }
 
 /* Compatibility for existing static pages that will receive their revised article copy in the next content pass. */
 .fluid-band { background: var(--ink-900); border-block: 1px solid var(--line); }
@@ -198,7 +213,28 @@ p { margin: 0 0 1.15rem; }
 label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .form-control { width: 100%; padding: .78rem .9rem; border: 1px solid rgba(238,241,246,.23); border-radius: .7rem; background: rgba(5,22,44,.65); color: var(--silver); font: inherit; }
 .form-control:focus { outline: none; border-color: var(--harbour-light); box-shadow: 0 0 0 3px rgba(38,155,255,.12); }
-.site-footer { border-top: 1px solid var(--line); background: #041225; }
+.form-control textarea, textarea.form-control { min-height: 132px; resize: vertical; }
+.contact-section { position: relative; }
+.contact-conversion { background: linear-gradient(135deg, #eee6d9, #dce8ef); }
+.contact-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(360px, 1.1fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.contact-conversion__intro { padding-top: .5rem; }
+.contact-conversion__intro > p { max-width: 540px; color: var(--silver-muted); }
+.contact-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin: 1.6rem 0 2.2rem; }
+.contact-note { color: var(--gold) !important; font-size: .88rem; font-weight: 800; }
+.inquiry-form { padding: clamp(1.35rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: 1.2rem; background: rgba(5,22,44,.48); box-shadow: var(--shadow); }
+.inquiry-form h3 { margin-bottom: 1.3rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.inquiry-form .form-group { margin-bottom: 1rem; }
+.inquiry-form .btn { width: 100%; }
+.form-helper, .form-status { color: var(--silver-muted); font-size: .78rem; }
+.form-status { min-height: 1.25rem; margin: .8rem 0 0; color: var(--gold); }
+.map-embed { min-height: 510px; overflow: hidden; border: 1px solid rgba(38,155,255,.38); border-radius: 1.2rem; background: var(--glass); box-shadow: var(--shadow); }
+.map-embed iframe { display: block; width: 100%; min-height: 510px; border: 0; }
+.reviews-link-card { margin-top: 2.3rem; padding: 1.2rem 1.3rem; border: 1px solid rgba(213,194,140,.42); border-radius: 1rem; background: rgba(5,22,44,.52); box-shadow: var(--shadow); }
+.reviews-link-card h3 { margin: .3rem 0 .55rem; font-size: 2rem; }
+.reviews-link-card p:not(.service-label) { margin-bottom: .8rem; font-size: .84rem; }
+.reviews-link-card a { color: var(--gold); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.site-footer { border-top: 1px solid var(--line); background: #05162c; }
 .footer-grid { display: grid; grid-template-columns: 1.55fr 1fr 1fr; gap: 3rem; padding: 3.75rem 0; }
 .footer-grid p { max-width: 350px; color: var(--silver-muted); font-size: .86rem; }
 .footer-links { margin: 0; padding: 0; list-style: none; }
@@ -212,7 +248,7 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 .cookie-actions { display: flex; gap: .5rem; }
 .btn-cookie { min-height: 38px; padding: .5rem .75rem; font-size: .62rem; }
 
-:root[data-theme="light"] .site-header { background: rgba(244,239,228,.92); }
+:root[data-theme="light"] .site-header { background: #f4efe4; }
 :root[data-theme="light"] .site-footer { background: #e4ebf2; }
 :root[data-theme="light"] .site-footer p, :root[data-theme="light"] .footer-links a, :root[data-theme="light"] .footer-bottom { color: #536476; }
 :root[data-theme="light"] .hero--home { background-image: linear-gradient(270deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 34%, rgba(244,239,228,.36) 56%, rgba(244,239,228,.02) 76%), url("images/gw-home-hero-1600x900.png"); }
@@ -232,13 +268,43 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 :root[data-theme="light"] .audio-card, :root[data-theme="light"] .article-audio { background: linear-gradient(145deg, rgba(255,255,255,.78), rgba(228,235,242,.78)); }
 :root[data-theme="light"] .audio-card p:not(.audio-card__number) { color: #536476; }
 
+/* Harbour Paper light appearance: readable cream surfaces, deep navy anchors and visible imagery. */
+:root[data-theme="light"] body { background: #e9e2d4; }
+:root[data-theme="light"] .section { background: linear-gradient(180deg, #eee6d9, #e7edf1); }
+:root[data-theme="light"] .section--navy { background: radial-gradient(circle at 88% 10%, rgba(38,155,255,.19), transparent 26rem), #081c35; }
+:root[data-theme="light"] .section--navy h1, :root[data-theme="light"] .section--navy h2, :root[data-theme="light"] .section--navy h3 { color: #eef1f6; }
+:root[data-theme="light"] .section--navy .section-lead > p, :root[data-theme="light"] .section--navy .journal-card__body p:not(.article-tag) { color: #b9c4d4; }
+:root[data-theme="light"] .section--navy .journal-card { border-color: rgba(238,241,246,.17); background: linear-gradient(145deg, rgba(20,66,109,.66), rgba(5,22,44,.46)); }
+:root[data-theme="light"] .journal-card { border-color: rgba(25,45,68,.19); background: rgba(255,255,255,.76); box-shadow: 0 20px 44px rgba(25,45,68,.13); }
+:root[data-theme="light"] .journal-card__body p:not(.article-tag) { color: #3e5268; }
+:root[data-theme="light"] .journal-card__link { color: #8e6a2f; }
+:root[data-theme="light"] .hero--home { background-image: linear-gradient(270deg, rgba(244,239,228,.96) 0%, rgba(244,239,228,.76) 32%, rgba(244,239,228,.32) 49%, rgba(244,239,228,.03) 72%), url("images/gw-home-hero-1600x900.png"); }
+:root[data-theme="light"] .hero--cartridges, :root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.74) 42%, rgba(244,239,228,.22) 66%, rgba(244,239,228,.03) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
+:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.74) 42%, rgba(244,239,228,.22) 66%, rgba(244,239,228,.03) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
+:root[data-theme="light"] .hero--ink-check-local-ink, :root[data-theme="light"] .hero--ink-identify-cartridge, :root[data-theme="light"] .hero--ink-small-business-printer, :root[data-theme="light"] .hero--ink-refill-replacement { background-size: cover; }
+:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-check-local-ink-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-small-business-printer-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
+:root[data-theme="light"] .hero-visit-card { background: rgba(244,239,228,.9); border-color: rgba(25,45,68,.24); }
+:root[data-theme="light"] .hero-visit-card b { color: #192d44; }
+:root[data-theme="light"] .btn-outline { border-color: rgba(25,45,68,.32); background: rgba(255,255,255,.48); color: #192d44; }
+:root[data-theme="light"] .contact-conversion { background: linear-gradient(135deg, #eee6d9, #dce8ef); }
+:root[data-theme="light"] .inquiry-form { border-color: rgba(25,45,68,.18); background: rgba(255,255,255,.78); box-shadow: 0 20px 44px rgba(25,45,68,.13); }
+:root[data-theme="light"] .inquiry-form .form-control { border-color: rgba(25,45,68,.22); background: rgba(255,255,255,.92); color: #192d44; }
+:root[data-theme="light"] .inquiry-form label, :root[data-theme="light"] .form-helper { color: #536476; }
+:root[data-theme="light"] .reviews-link-card { border-color: rgba(25,45,68,.18); background: rgba(255,255,255,.68); box-shadow: 0 15px 34px rgba(25,45,68,.09); }
+:root[data-theme="light"] .reviews-link-card p:not(.service-label) { color: #536476; }
+
 @media (max-width: 800px) {
   .container { width: min(100% - 2rem, 1160px); }
   .nav-bar { min-height: 68px; align-items: flex-start; padding: .8rem 0; }
   .brand-lockup small { display: none; }
   .brand-lockup img { width: 40px; height: 40px; }
-  .brand-lockup--artwork { width: min(230px, 62vw); min-width: 150px; height: 54px; }
-  .brand-lockup--artwork .brand-art { height: 54px; }
+  .brand-lockup--artwork { width: min(280px, 72vw); min-width: 190px; height: 64px; }
+  .brand-lockup--artwork .brand-art { height: 64px; }
+  :root:not([data-theme="light"]) .nav-bar { min-height: 98px; }
+  :root:not([data-theme="light"]) .brand-lockup--artwork .brand-art--dark { transform: scale(1.38); }
   .main-nav { gap: .55rem .9rem; padding-top: .3rem; }
   .nav-link { font-size: .57rem; }
   .hero { min-height: 570px; }
@@ -246,8 +312,13 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   .hero--home { background-image: linear-gradient(180deg, rgba(5,22,44,.68), rgba(5,22,44,.88)), url("images/gw-home-hero-1600x900.png"); }
   .hero--home .hero-content { width: auto; margin-left: 0; }
   .hero-logo { right: 1rem; bottom: 1rem; width: 105px; }
+  .hero-visit-card { right: 1rem; bottom: 1rem; width: min(260px, calc(100% - 2rem)); }
   .section, .local-band .container { padding: 4.5rem 0; }
-  .section-lead, .service-rail, .photo-split, .location-band, .journal-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .section-lead, .service-rail, .photo-split, .location-band, .journal-layout, .journal-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .contact-layout, .form-row { grid-template-columns: 1fr; }
+  .map-embed, .map-embed iframe { min-height: 360px; }
+  .journal-card, .journal-card--lead { grid-column: auto; }
+  .journal-card__media, .journal-card--lead .journal-card__media { height: 230px; }
   .audio-grid { grid-template-columns: 1fr; }
   .article-audio { grid-template-columns: 1fr; }
   .service-item--gold { margin-top: 0; }
@@ -261,8 +332,9 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 /* Mobile navigation: single horizontal row of clear touch targets without changing the protected logo artwork. */
 @media (max-width: 620px) {
   .nav-bar { display: grid; grid-template-columns: 1fr; gap: .45rem; }
-  .brand-lockup--artwork { width: min(255px, 76vw); height: 58px; }
-  .brand-lockup--artwork .brand-art { height: 58px; }
+  .brand-lockup--artwork { width: min(305px, 84vw); height: 68px; }
+  .brand-lockup--artwork .brand-art { height: 68px; }
+  :root:not([data-theme="light"]) .nav-bar { min-height: 94px; }
   .main-nav { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: .45rem; padding: 0 0 .15rem; }
   .nav-link { display: inline-flex; flex: 0 0 auto; align-items: center; min-height: 40px; padding: .55rem .7rem; border: 1px solid rgba(238,241,246,.16); border-radius: .55rem; background: rgba(13,43,76,.32); font-size: .61rem; letter-spacing: .07em; }
   .nav-link::after { display: none; }
