@@ -68,6 +68,9 @@ p { margin: 0 0 1.15rem; }
 .appearance-toggle { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; gap: .42rem; padding: .52rem .68rem; border: 1px solid rgba(238,241,246,.2); border-radius: .55rem; background: rgba(13,43,76,.28); color: var(--silver-muted); font: inherit; font-size: .58rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; cursor: pointer; }
 .appearance-toggle:hover, .appearance-toggle:focus-visible { border-color: var(--gold); color: var(--gold); outline: none; }
 .appearance-toggle__mark { color: var(--gold); font-size: .95rem; line-height: 1; }
+.audio-guides-link { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; gap: .42rem; padding: .52rem .68rem; border: 1px solid rgba(38,155,255,.46); border-radius: .55rem; background: rgba(38,155,255,.08); color: var(--silver); font-size: .58rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; transition: border-color 160ms ease-out, background 160ms ease-out, transform 160ms ease-out; }
+.audio-guides-link:hover, .audio-guides-link:focus-visible, .audio-guides-link--active { border-color: var(--gold); background: rgba(213,194,140,.1); color: var(--gold); outline: none; transform: translateY(-1px); }
+.audio-guides-link span { color: var(--harbour-light); font-size: .66rem; }
 
 /* Actions */
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .8rem 1.1rem; border: 1px solid transparent; border-radius: .72rem; font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: transform 160ms ease-out, border-color 160ms ease-out, background 160ms ease-out; }
@@ -160,6 +163,29 @@ p { margin: 0 0 1.15rem; }
 .article-intro { max-width: 720px; color: var(--silver) !important; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(1.4rem, 3vw, 1.8rem) !important; line-height: 1.25; }
 .article-hero-image { height: min(420px, 55vw); margin: 2.5rem 0 3.5rem; border: 1px solid rgba(213,194,140,.4); border-radius: 1rem; background-position: center; background-size: cover; box-shadow: var(--shadow); }
 .article-footer { margin-top: 4rem; padding: 1.5rem 0 0; border-top: 1px solid rgba(38,155,255,.4); }
+.article-audio { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, .85fr); gap: 1.25rem; align-items: center; margin: 1.8rem 0 2.7rem; padding: 1.2rem 1.3rem; border: 1px solid rgba(38,155,255,.38); border-radius: 1rem; background: linear-gradient(135deg, rgba(38,155,255,.11), rgba(13,43,76,.34)); box-shadow: inset 0 0 30px rgba(38,155,255,.05); }
+.article-audio p { margin-bottom: 0; font-size: .84rem; }
+.article-audio .service-label { margin-bottom: .25rem; }
+.article-audio audio, .audio-card audio { width: 100%; height: 38px; }
+
+/* Audio Guides: a small, local listening library rather than a generic podcast gallery. */
+.audio-page { padding-top: 0; }
+.audio-hero { position: relative; overflow: hidden; padding: 7rem 0 5rem; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 86% 15%, rgba(38,155,255,.19), transparent 24rem), linear-gradient(135deg, var(--ink-900), var(--ink-950)); }
+.audio-hero::after { position: absolute; top: 18%; right: 10%; width: 20rem; height: 20rem; border: 1px solid rgba(213,194,140,.22); border-radius: 50%; box-shadow: 0 0 65px rgba(38,155,255,.12); content: ""; }
+.audio-hero .container { position: relative; z-index: 1; }
+.audio-hero h1 { max-width: 830px; }
+.audio-hero > .container > p:not(.eyebrow) { max-width: 670px; color: var(--silver-muted); font-size: clamp(1rem, 1.5vw, 1.15rem); }
+.audio-note { margin-top: 1.35rem; color: var(--silver) !important; }
+.audio-note a { color: var(--gold); font-weight: 800; }
+.audio-section { padding: 5.5rem 0 6.5rem; }
+.audio-section__heading { margin-bottom: 2rem; }
+.audio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.audio-card { position: relative; display: grid; gap: .9rem; min-height: 265px; padding: 1.6rem; border: 1px solid var(--line); border-radius: 1.1rem; background: linear-gradient(145deg, rgba(14,53,91,.5), rgba(5,22,44,.2)); box-shadow: var(--shadow); }
+.audio-card::before { position: absolute; top: 1.2rem; right: 1.2rem; width: 1.8rem; height: 1.8rem; border: 1px solid rgba(38,155,255,.5); border-radius: 50%; box-shadow: 0 0 18px rgba(38,155,255,.15); content: ""; }
+.audio-card__number { margin: 0; color: var(--gold); font-size: .68rem; font-weight: 800; letter-spacing: .15em; }
+.audio-card h3 { max-width: 430px; margin: 0; font-size: clamp(1.8rem, 3vw, 2.45rem); }
+.audio-card p:not(.audio-card__number) { margin: 0; color: var(--silver-muted); font-size: .86rem; }
+.audio-card a { align-self: end; color: var(--gold); font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 
 /* Forms and footer */
 .contact-form-wrapper { padding: 2rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--glass); box-shadow: var(--shadow); }
@@ -192,6 +218,10 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 :root[data-theme="light"] .location-panel { background: linear-gradient(135deg, rgba(38,155,255,.12), rgba(255,255,255,.76)); }
 :root[data-theme="light"] .cookie-banner { background: rgba(244,239,228,.97); color: var(--paper-ink); }
 :root[data-theme="light"] .appearance-toggle { border-color: rgba(25,45,68,.18); background: rgba(255,255,255,.58); }
+:root[data-theme="light"] .audio-guides-link { border-color: rgba(38,155,255,.42); background: rgba(255,255,255,.55); color: var(--paper-ink); }
+:root[data-theme="light"] .audio-hero { background: radial-gradient(circle at 86% 15%, rgba(38,155,255,.17), transparent 24rem), linear-gradient(135deg, #eef1f6, #f4efe4); }
+:root[data-theme="light"] .audio-card, :root[data-theme="light"] .article-audio { background: linear-gradient(145deg, rgba(255,255,255,.78), rgba(228,235,242,.78)); }
+:root[data-theme="light"] .audio-card p:not(.audio-card__number) { color: #536476; }
 
 @media (max-width: 800px) {
   .container { width: min(100% - 2rem, 1160px); }
@@ -208,6 +238,8 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   .hero-logo { right: 1rem; bottom: 1rem; width: 105px; }
   .section, .local-band .container { padding: 4.5rem 0; }
   .section-lead, .service-rail, .photo-split, .location-band, .journal-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .audio-grid { grid-template-columns: 1fr; }
+  .article-audio { grid-template-columns: 1fr; }
   .service-item--gold { margin-top: 0; }
   .photo-split { margin: 4.5rem 0; }
   .photo-split__image { min-height: 280px; }
@@ -226,6 +258,10 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   .nav-link::after { display: none; }
   .nav-link-active { border-color: rgba(213,194,140,.6); color: var(--gold); }
   .appearance-toggle { min-height: 40px; padding: .55rem .7rem; font-size: .58rem; }
+  .audio-guides-link { min-height: 40px; padding: .55rem .7rem; font-size: .58rem; }
+  .audio-hero { padding: 5rem 0 3.75rem; }
+  .audio-section { padding: 4rem 0 5rem; }
+  .audio-card { min-height: 0; padding: 1.3rem; }
   .cookie-banner { right: .6rem; bottom: .6rem; left: .6rem; display: block; padding: .8rem .9rem; }
   .cookie-banner p { margin-bottom: .5rem; }
   .cookie-actions { justify-content: flex-start; margin-top: .65rem; }
