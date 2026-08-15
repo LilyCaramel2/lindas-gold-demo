@@ -23,7 +23,7 @@
   --ink-800: #e4ebf2;
   --ink-700: #cad8e7;
   --silver: #192d44;
-  --silver-muted: #536476;
+  --silver-muted: #153f6c;
   --paper: #f4efe4;
   --paper-ink: #192d44;
   --line: rgba(25, 45, 68, .16);
@@ -136,7 +136,7 @@ p { margin: 0 0 1.15rem; }
 .section--navy { background: var(--ink-900); }
 .section--paper { background: var(--paper); color: var(--paper-ink); }
 .section--paper h2, .section--paper h3 { color: var(--paper-ink); }
-.section--paper p { color: #536476; }
+.section--paper p { color: var(--ink-700); }
 .section-lead { display: grid; grid-template-columns: 1.1fr .9fr; gap: 4rem; align-items: end; margin-bottom: 2.7rem; }
 .section-lead h2 { max-width: 720px; }
 .section-lead > p { max-width: 440px; margin: 0; color: var(--silver-muted); }
@@ -160,9 +160,14 @@ p { margin: 0 0 1.15rem; }
 .local-band { position: relative; overflow: hidden; background: linear-gradient(90deg, rgba(244,239,228,.96) 0%, rgba(244,239,228,.76) 56%, rgba(244,239,228,.45) 100%), url("images/gw-spare-shopfront-800x800.png") right/cover; }
 .local-band .container { padding: 6rem 0; }
 .local-band h2 { max-width: 820px; }
-.local-band p:not(.eyebrow) { max-width: 720px; color: #516173; }
+.local-band p:not(.eyebrow) { max-width: 720px; color: var(--ink-700); }
 .tag-row { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.35rem 0; }
 .tag-row span { padding: .48rem .7rem; border: 1px solid rgba(25,45,68,.16); border-radius: 999px; background: rgba(255,255,255,.45); color: var(--ink-800); font-size: .7rem; font-weight: 800; }
+/* Harbour Light Blue contrast surfaces: dark mode keeps every content field within the approved navy, silver, gold and blue system. */
+:root:not([data-theme="light"]) .local-band { background: linear-gradient(105deg, rgba(13,43,76,.98) 0%, rgba(21,63,108,.94) 54%, rgba(5,22,44,.78) 100%), url("images/gw-spare-shopfront-800x800.png") right/cover; }
+:root:not([data-theme="light"]) .local-band h2 { color: var(--silver); }
+:root:not([data-theme="light"]) .local-band p:not(.eyebrow) { color: var(--silver-muted); }
+:root:not([data-theme="light"]) .tag-row span { border-color: rgba(38,155,255,.54); background: rgba(38,155,255,.13); color: var(--silver); }
 .location-band { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; padding: 6rem 0; }
 .location-panel { padding: 2rem; border: 1px solid rgba(38,155,255,.4); border-radius: 1.2rem; background: linear-gradient(135deg, rgba(38,155,255,.15), rgba(5,22,44,.74)); box-shadow: inset 0 0 35px rgba(38,155,255,.08); }
 .location-panel h3 { font-size: 2.1rem; }
@@ -241,7 +246,7 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 .form-control:focus { outline: none; border-color: var(--harbour-light); box-shadow: 0 0 0 3px rgba(38,155,255,.12); }
 .form-control textarea, textarea.form-control { min-height: 132px; resize: vertical; }
 .contact-section { position: relative; }
-.contact-conversion { background: linear-gradient(135deg, #eee6d9, #dce8ef); }
+.contact-conversion { background: linear-gradient(135deg, #d6effd, #e7f1f7); }
 .contact-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(360px, 1.1fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
 .contact-conversion__intro { padding-top: .5rem; }
 .contact-conversion__intro > p { max-width: 540px; color: var(--silver-muted); }
@@ -274,9 +279,16 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 .cookie-actions { display: flex; gap: .5rem; }
 .btn-cookie { min-height: 38px; padding: .5rem .75rem; font-size: .62rem; }
 
-:root[data-theme="light"] .site-header { background: #f4efe4; }
-:root[data-theme="light"] .site-footer { background: #e4ebf2; }
-:root[data-theme="light"] .site-footer p, :root[data-theme="light"] .footer-links a, :root[data-theme="light"] .footer-bottom { color: #536476; }
+:root:not([data-theme="light"]) .section--paper { background: linear-gradient(135deg, #0d2b4c, #153f6c); color: var(--silver); }
+:root:not([data-theme="light"]) .section--paper h2, :root:not([data-theme="light"]) .section--paper h3 { color: var(--silver); }
+:root:not([data-theme="light"]) .section--paper p { color: var(--silver-muted); }
+:root:not([data-theme="light"]) .contact-conversion { background: linear-gradient(135deg, #153f6c 0%, #0d2b4c 58%, #081c35 100%); }
+:root:not([data-theme="light"]) .contact-conversion__intro h2 { color: var(--silver); }
+:root:not([data-theme="light"]) .contact-conversion__intro > p { color: var(--silver-muted); }
+
+:root[data-theme="light"] .site-header { background: #eef1f6; }
+:root[data-theme="light"] .site-footer { background: #d8eaf6; }
+:root[data-theme="light"] .site-footer p, :root[data-theme="light"] .footer-links a, :root[data-theme="light"] .footer-bottom { color: #153f6c; }
 :root[data-theme="light"] .hero--home { background-image: linear-gradient(270deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 34%, rgba(244,239,228,.36) 56%, rgba(244,239,228,.02) 76%), url("images/gw-home-hero-1600x900.png"); }
 :root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.86) 55%, rgba(244,239,228,.42) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
 :root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.82) 55%, rgba(244,239,228,.4) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
@@ -284,53 +296,56 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 :root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 44%, rgba(244,239,228,.24) 100%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
 :root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 44%, rgba(244,239,228,.24) 100%), url("images/gw-blog-small-business-printer-1200x630.png"); }
 :root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 44%, rgba(244,239,228,.24) 100%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
-:root[data-theme="light"] .hero-content > p:not(.eyebrow), :root[data-theme="light"] .hero-trust, :root[data-theme="light"] .service-item p, :root[data-theme="light"] .journal-feature p, :root[data-theme="light"] .journal-list p, :root[data-theme="light"] .article-shell p, :root[data-theme="light"] .photo-split__content p, :root[data-theme="light"] .location-panel p { color: #536476; }
-:root[data-theme="light"] .photo-split { background: linear-gradient(135deg, rgba(255,255,255,.94), rgba(228,235,242,.9)); }
-:root[data-theme="light"] .location-panel { background: linear-gradient(135deg, rgba(38,155,255,.12), rgba(255,255,255,.76)); }
-:root[data-theme="light"] .cookie-banner { background: rgba(244,239,228,.97); color: var(--paper-ink); }
-:root[data-theme="light"] .appearance-toggle { border-color: rgba(25,45,68,.18); background: rgba(255,255,255,.58); }
-:root[data-theme="light"] .audio-guides-link { border-color: rgba(38,155,255,.42); background: rgba(255,255,255,.55); color: var(--paper-ink); }
-:root[data-theme="light"] .audio-hero { background: radial-gradient(circle at 86% 15%, rgba(38,155,255,.17), transparent 24rem), linear-gradient(135deg, #eef1f6, #f4efe4); }
-:root[data-theme="light"] .audio-card, :root[data-theme="light"] .article-audio { background: linear-gradient(145deg, rgba(255,255,255,.78), rgba(228,235,242,.78)); }
-:root[data-theme="light"] .audio-card p:not(.audio-card__number) { color: #536476; }
-:root[data-theme="light"] .audio-language-link { border-color: rgba(25,45,68,.2); background: linear-gradient(135deg, rgba(255,255,255,.76), rgba(228,235,242,.88)); box-shadow: 0 16px 34px rgba(25,45,68,.1); }
+:root[data-theme="light"] .hero-content > p:not(.eyebrow), :root[data-theme="light"] .hero-trust, :root[data-theme="light"] .service-item p, :root[data-theme="light"] .journal-feature p, :root[data-theme="light"] .journal-list p, :root[data-theme="light"] .article-shell p, :root[data-theme="light"] .photo-split__content p, :root[data-theme="light"] .location-panel p { color: #153f6c; }
+/* Light contrast fields: silver-white is paired with Harbour Light Blue so cards remain part of the same visual system. */
+:root[data-theme="light"] .photo-split { background: linear-gradient(135deg, rgba(238,241,246,.96), rgba(211,235,250,.9)); }
+:root[data-theme="light"] .location-panel { background: linear-gradient(135deg, rgba(38,155,255,.17), rgba(211,235,250,.78)); }
+:root[data-theme="light"] .cookie-banner { background: rgba(238,241,246,.97); color: var(--paper-ink); }
+:root[data-theme="light"] .appearance-toggle { border-color: rgba(38,155,255,.34); background: rgba(211,235,250,.7); }
+:root[data-theme="light"] .audio-guides-link { border-color: rgba(38,155,255,.54); background: rgba(211,235,250,.66); color: var(--paper-ink); }
+:root[data-theme="light"] .audio-hero { background: radial-gradient(circle at 86% 15%, rgba(38,155,255,.24), transparent 24rem), linear-gradient(135deg, #eef1f6, #d8eaf6); }
+:root[data-theme="light"] .audio-card, :root[data-theme="light"] .article-audio { background: linear-gradient(145deg, rgba(238,241,246,.9), rgba(211,235,250,.84)); }
+:root[data-theme="light"] .audio-card p:not(.audio-card__number) { color: #153f6c; }
+:root[data-theme="light"] .audio-language-link { border-color: rgba(38,155,255,.36); background: linear-gradient(135deg, rgba(238,241,246,.9), rgba(211,235,250,.9)); box-shadow: 0 16px 34px rgba(25,45,68,.1); }
 :root[data-theme="light"] .audio-language-link b { color: #192d44; }
-:root[data-theme="light"] .audio-language-link small { color: #536476; }
+:root[data-theme="light"] .audio-language-link small { color: #153f6c; }
 
 /* Harbour Paper light appearance: readable cream surfaces, deep navy anchors and visible imagery. */
-:root[data-theme="light"] body { background: #e9e2d4; }
-:root[data-theme="light"] .section { background: linear-gradient(180deg, #eee6d9, #e7edf1); }
+:root[data-theme="light"] body { background: #eef1f6; }
+:root[data-theme="light"] .section { background: linear-gradient(180deg, #eef1f6, #d8eaf6); }
 :root[data-theme="light"] .section--navy { background: radial-gradient(circle at 88% 10%, rgba(38,155,255,.19), transparent 26rem), #081c35; }
 :root[data-theme="light"] .section--navy h1, :root[data-theme="light"] .section--navy h2, :root[data-theme="light"] .section--navy h3 { color: #eef1f6; }
 :root[data-theme="light"] .section--navy .section-lead > p, :root[data-theme="light"] .section--navy .journal-card__body p:not(.article-tag) { color: #b9c4d4; }
 :root[data-theme="light"] .section--navy .journal-card { border-color: rgba(238,241,246,.17); background: linear-gradient(145deg, rgba(20,66,109,.66), rgba(5,22,44,.46)); }
-:root[data-theme="light"] .journal-card { border-color: rgba(25,45,68,.19); background: rgba(255,255,255,.76); box-shadow: 0 20px 44px rgba(25,45,68,.13); }
-:root[data-theme="light"] .journal-card__body p:not(.article-tag) { color: #3e5268; }
+:root[data-theme="light"] .journal-card { border-color: rgba(38,155,255,.3); background: linear-gradient(145deg, rgba(238,241,246,.94), rgba(211,235,250,.86)); box-shadow: 0 20px 44px rgba(25,45,68,.13); }
+:root[data-theme="light"] .journal-card__body p:not(.article-tag) { color: #153f6c; }
 :root[data-theme="light"] .journal-card__link { color: #8e6a2f; }
-:root[data-theme="light"] .hero--home { background-image: linear-gradient(270deg, rgba(244,239,228,.96) 0%, rgba(244,239,228,.76) 32%, rgba(244,239,228,.32) 49%, rgba(244,239,228,.03) 72%), url("images/gw-home-hero-1600x900.png"); }
-:root[data-theme="light"] .hero-language-link { border-color: rgba(25,45,68,.18); background: rgba(255,255,255,.76); box-shadow: 0 10px 24px rgba(25,45,68,.1); }
+:root[data-theme="light"] .hero--home { background-image: linear-gradient(270deg, rgba(238,241,246,.96) 0%, rgba(211,235,250,.8) 32%, rgba(211,235,250,.34) 49%, rgba(211,235,250,.03) 72%), url("images/gw-home-hero-1600x900.png"); }
+:root[data-theme="light"] .hero-language-link { border-color: rgba(38,155,255,.35); background: rgba(211,235,250,.8); box-shadow: 0 10px 24px rgba(25,45,68,.1); }
 :root[data-theme="light"] .hero-language-link a { color: #192d44; }
-:root[data-theme="light"] .language-switcher { border-color: rgba(25,45,68,.2); background: rgba(228,235,242,.92); }
+:root[data-theme="light"] .language-switcher { border-color: rgba(38,155,255,.35); background: rgba(211,235,250,.82); }
 :root[data-theme="light"] .language-switcher::before { border-right-color: rgba(25,45,68,.16); color: #806525; }
 :root[data-theme="light"] .language-switcher a { color: #192d44; }
 :root[data-theme="light"] .language-switcher a + a { border-left-color: rgba(25,45,68,.16); }
-:root[data-theme="light"] .language-switcher a:hover, :root[data-theme="light"] .language-switcher a:focus-visible, :root[data-theme="light"] .language-switcher a[aria-current="page"] { background: rgba(255,255,255,.9); color: #192d44; }
-:root[data-theme="light"] .hero--cartridges, :root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.74) 42%, rgba(244,239,228,.22) 66%, rgba(244,239,228,.03) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
-:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.74) 42%, rgba(244,239,228,.22) 66%, rgba(244,239,228,.03) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
+:root[data-theme="light"] .language-switcher a:hover, :root[data-theme="light"] .language-switcher a:focus-visible, :root[data-theme="light"] .language-switcher a[aria-current="page"] { background: rgba(238,241,246,.94); color: #192d44; }
+:root[data-theme="light"] .hero--cartridges, :root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(238,241,246,.95) 0%, rgba(211,235,250,.78) 42%, rgba(211,235,250,.24) 66%, rgba(211,235,250,.03) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
+:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(238,241,246,.95) 0%, rgba(211,235,250,.78) 42%, rgba(211,235,250,.24) 66%, rgba(211,235,250,.03) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
 :root[data-theme="light"] .hero--ink-check-local-ink, :root[data-theme="light"] .hero--ink-identify-cartridge, :root[data-theme="light"] .hero--ink-small-business-printer, :root[data-theme="light"] .hero--ink-refill-replacement { background-size: cover; }
-:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-check-local-ink-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-small-business-printer-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
-:root[data-theme="light"] .hero-visit-card { background: rgba(244,239,228,.9); border-color: rgba(25,45,68,.24); }
+:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(238,241,246,.95) 0%, rgba(211,235,250,.76) 44%, rgba(211,235,250,.2) 68%, rgba(211,235,250,.02) 100%), url("images/gw-blog-check-local-ink-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(238,241,246,.95) 0%, rgba(211,235,250,.76) 44%, rgba(211,235,250,.2) 68%, rgba(211,235,250,.02) 100%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(238,241,246,.95) 0%, rgba(211,235,250,.76) 44%, rgba(211,235,250,.2) 68%, rgba(211,235,250,.02) 100%), url("images/gw-blog-small-business-printer-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(238,241,246,.95) 0%, rgba(211,235,250,.76) 44%, rgba(211,235,250,.2) 68%, rgba(211,235,250,.02) 100%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
+:root[data-theme="light"] .hero-visit-card { background: rgba(211,235,250,.9); border-color: rgba(38,155,255,.38); }
 :root[data-theme="light"] .hero-visit-card b { color: #192d44; }
-:root[data-theme="light"] .btn-outline { border-color: rgba(25,45,68,.32); background: rgba(255,255,255,.48); color: #192d44; }
-:root[data-theme="light"] .contact-conversion { background: linear-gradient(135deg, #eee6d9, #dce8ef); }
-:root[data-theme="light"] .inquiry-form { border-color: rgba(25,45,68,.18); background: rgba(255,255,255,.78); box-shadow: 0 20px 44px rgba(25,45,68,.13); }
-:root[data-theme="light"] .inquiry-form .form-control { border-color: rgba(25,45,68,.22); background: rgba(255,255,255,.92); color: #192d44; }
-:root[data-theme="light"] .inquiry-form label, :root[data-theme="light"] .form-helper { color: #536476; }
-:root[data-theme="light"] .reviews-link-card { border-color: rgba(25,45,68,.18); background: rgba(255,255,255,.68); box-shadow: 0 15px 34px rgba(25,45,68,.09); }
-:root[data-theme="light"] .reviews-link-card p:not(.service-label) { color: #536476; }
+:root[data-theme="light"] .btn-outline { border-color: rgba(38,155,255,.46); background: rgba(211,235,250,.7); color: #192d44; }
+:root[data-theme="light"] .local-band { background: linear-gradient(100deg, rgba(238,241,246,.96) 0%, rgba(211,235,250,.84) 55%, rgba(238,241,246,.46) 100%), url("images/gw-spare-shopfront-800x800.png") right/cover; }
+:root[data-theme="light"] .tag-row span { border-color: rgba(38,155,255,.36); background: rgba(38,155,255,.1); color: #192d44; }
+:root[data-theme="light"] .contact-conversion { background: linear-gradient(135deg, #cde9fb, #eef1f6); }
+:root[data-theme="light"] .inquiry-form { border-color: rgba(38,155,255,.28); background: linear-gradient(145deg, rgba(238,241,246,.94), rgba(211,235,250,.82)); box-shadow: 0 20px 44px rgba(25,45,68,.13); }
+:root[data-theme="light"] .inquiry-form .form-control { border-color: rgba(38,155,255,.3); background: rgba(238,241,246,.94); color: #192d44; }
+:root[data-theme="light"] .inquiry-form label, :root[data-theme="light"] .form-helper { color: #153f6c; }
+:root[data-theme="light"] .reviews-link-card { border-color: rgba(38,155,255,.3); background: rgba(211,235,250,.66); box-shadow: 0 15px 34px rgba(25,45,68,.09); }
+:root[data-theme="light"] .reviews-link-card p:not(.service-label) { color: #153f6c; }
 
 @media (max-width: 800px) {
   .container { width: min(100% - 2rem, 1160px); }
