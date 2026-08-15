@@ -354,9 +354,9 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 /* Desktop dark hero: a translucent navy reading field keeps the protected scene visible while stabilising copy contrast. */
 @media (min-width: 801px) {
   :root:not([data-theme="light"]) .hero--home .hero-content { padding: clamp(2rem, 3.5vw, 4rem); border: 1px solid rgba(38,155,255,.34); border-radius: 1.15rem; background: linear-gradient(145deg, rgba(5,22,44,.78), rgba(13,43,76,.62)); box-shadow: 0 24px 55px rgba(5,22,44,.26); }
-  /* Light desktop hero: use the full grid height for a composed side field, not a short strip across the image. */
-  :root[data-theme="light"] .hero--home { min-height: min(790px, calc(100vh - 78px)); }
-  :root[data-theme="light"] .hero--home .hero-content { width: min(55%, 760px); min-height: 100%; margin-left: auto; padding: clamp(3rem, 5vw, 5rem) clamp(2rem, 5vw, 5rem); border-top: 0; border-right: 0; border-bottom: 0; border-left: 1px solid rgba(38,155,255,.52); border-radius: 0; background: linear-gradient(90deg, rgba(5,22,44,.93) 0%, rgba(13,43,76,.93) 64%, rgba(13,43,76,.62) 100%); box-shadow: -24px 0 55px rgba(5,22,44,.2); }
+  /* Light desktop hero: keep the photograph as the hero and use one soft navy reading gradient, not a separate panel. */
+  :root[data-theme="light"] .hero--home { min-height: min(790px, calc(100vh - 78px)); background-image: linear-gradient(90deg, rgba(5,22,44,.94) 0%, rgba(5,22,44,.78) 38%, rgba(13,43,76,.28) 70%, rgba(13,43,76,.04) 100%), url("images/gw-home-hero-1600x900.png"); }
+  :root[data-theme="light"] .hero--home .hero-content { width: auto; max-width: none; min-height: 0; margin-inline: auto; padding: clamp(3rem, 5vw, 5rem) 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
 }
 
 @media (max-width: 800px) {
