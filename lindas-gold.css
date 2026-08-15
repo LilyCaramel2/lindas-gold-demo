@@ -75,6 +75,8 @@ p { margin: 0 0 1.15rem; }
 .audio-guides-link:hover, .audio-guides-link:focus-visible, .audio-guides-link--active { border-color: var(--gold); background: rgba(213,194,140,.1); color: var(--gold); outline: none; transform: translateY(-1px); }
 .audio-guides-link span { color: var(--harbour-light); font-size: .66rem; }
 .language-switcher { display: inline-flex; overflow: hidden; border: 1px solid rgba(238,241,246,.24); border-radius: .55rem; background: rgba(13,43,76,.26); flex: 0 0 auto; }
+.language-switcher::before { display: inline-flex; align-items: center; padding: .5rem .48rem; border-right: 1px solid rgba(238,241,246,.18); color: var(--gold); font-size: .55rem; font-weight: 800; letter-spacing: .09em; content: "LANG"; }
+:root[lang="af"] .language-switcher::before { content: "TAAL"; }
 .language-switcher a { min-width: 34px; padding: .5rem .46rem; color: var(--silver-muted); font-size: .58rem; font-weight: 800; letter-spacing: .08em; text-align: center; }
 .language-switcher a + a { border-left: 1px solid rgba(238,241,246,.18); }
 .language-switcher a:hover, .language-switcher a:focus-visible, .language-switcher a[aria-current="page"] { background: rgba(213,194,140,.15); color: var(--gold); outline: none; }
@@ -96,6 +98,10 @@ p { margin: 0 0 1.15rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.7rem; }
 .hero-trust { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.25rem; color: var(--silver-muted); font-size: .78rem; }
 .hero-trust span::before { display: inline-block; width: .5rem; height: .5rem; margin-right: .4rem; border: 1px solid var(--harbour-light); border-radius: 50%; box-shadow: 0 0 9px rgba(38,155,255,.6); content: ""; }
+.hero-language-link { display: inline-flex; flex-wrap: wrap; gap: .56rem; align-items: center; width: fit-content; margin: 1.15rem 0 0; padding: .48rem .68rem; border: 1px solid rgba(38,155,255,.38); border-radius: .6rem; background: rgba(5,22,44,.42); box-shadow: inset 0 0 18px rgba(38,155,255,.06); color: var(--silver-muted); font-size: .8rem; font-weight: 700; }
+.hero-language-link span { color: var(--gold); font-size: .61rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+.hero-language-link a { color: var(--silver); text-decoration: underline; text-decoration-color: rgba(38,155,255,.85); text-decoration-thickness: 1px; text-underline-offset: .28rem; }
+.hero-language-link a:hover, .hero-language-link a:focus-visible { color: var(--gold); outline: none; }
 .hero--home { min-height: min(790px, calc(100vh - 78px)); background-position: center; background-image: linear-gradient(270deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.78) 32%, rgba(5,22,44,.24) 54%, rgba(5,22,44,.02) 74%), url("images/gw-home-hero-1600x900.png"); }
 .hero--home .hero-content { width: min(43%, 610px); margin-left: auto; }
 .hero--cartridges { background-image: linear-gradient(90deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.72) 55%, rgba(5,22,44,.24) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
@@ -201,6 +207,11 @@ p { margin: 0 0 1.15rem; }
 .audio-hero > .container > p:not(.eyebrow) { max-width: 670px; color: var(--silver-muted); font-size: clamp(1rem, 1.5vw, 1.15rem); }
 .audio-note { margin-top: 1.35rem; color: var(--silver) !important; }
 .audio-note a { color: var(--gold); font-weight: 800; }
+.audio-language-link { display: grid; grid-template-columns: auto 1fr; column-gap: .72rem; align-items: center; width: min(520px, 100%); margin-top: 1.45rem; padding: .82rem 1rem; border: 1px solid rgba(38,155,255,.46); border-radius: .9rem; background: rgba(13,43,76,.32); box-shadow: inset 0 0 24px rgba(38,155,255,.07); }
+.audio-language-link > span { grid-row: span 2; display: grid; width: 2.4rem; height: 2.4rem; border: 1px solid rgba(213,194,140,.62); border-radius: 50%; color: var(--gold); font-size: .68rem; font-weight: 800; place-items: center; }
+.audio-language-link b { color: var(--silver); font-size: .82rem; letter-spacing: .02em; }
+.audio-language-link small { color: var(--silver-muted); font-size: .72rem; }
+.audio-language-link:hover, .audio-language-link:focus-visible { border-color: var(--gold); background: rgba(213,194,140,.1); outline: none; transform: translateY(-1px); }
 .audio-section { padding: 5.5rem 0 6.5rem; }
 .audio-section__heading { margin-bottom: 2rem; }
 .audio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
@@ -271,6 +282,9 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 :root[data-theme="light"] .audio-hero { background: radial-gradient(circle at 86% 15%, rgba(38,155,255,.17), transparent 24rem), linear-gradient(135deg, #eef1f6, #f4efe4); }
 :root[data-theme="light"] .audio-card, :root[data-theme="light"] .article-audio { background: linear-gradient(145deg, rgba(255,255,255,.78), rgba(228,235,242,.78)); }
 :root[data-theme="light"] .audio-card p:not(.audio-card__number) { color: #536476; }
+:root[data-theme="light"] .audio-language-link { border-color: rgba(25,45,68,.2); background: linear-gradient(135deg, rgba(255,255,255,.76), rgba(228,235,242,.88)); box-shadow: 0 16px 34px rgba(25,45,68,.1); }
+:root[data-theme="light"] .audio-language-link b { color: #192d44; }
+:root[data-theme="light"] .audio-language-link small { color: #536476; }
 
 /* Harbour Paper light appearance: readable cream surfaces, deep navy anchors and visible imagery. */
 :root[data-theme="light"] body { background: #e9e2d4; }
@@ -283,6 +297,13 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 :root[data-theme="light"] .journal-card__body p:not(.article-tag) { color: #3e5268; }
 :root[data-theme="light"] .journal-card__link { color: #8e6a2f; }
 :root[data-theme="light"] .hero--home { background-image: linear-gradient(270deg, rgba(244,239,228,.96) 0%, rgba(244,239,228,.76) 32%, rgba(244,239,228,.32) 49%, rgba(244,239,228,.03) 72%), url("images/gw-home-hero-1600x900.png"); }
+:root[data-theme="light"] .hero-language-link { border-color: rgba(25,45,68,.18); background: rgba(255,255,255,.76); box-shadow: 0 10px 24px rgba(25,45,68,.1); }
+:root[data-theme="light"] .hero-language-link a { color: #192d44; }
+:root[data-theme="light"] .language-switcher { border-color: rgba(25,45,68,.2); background: rgba(228,235,242,.92); }
+:root[data-theme="light"] .language-switcher::before { border-right-color: rgba(25,45,68,.16); color: #806525; }
+:root[data-theme="light"] .language-switcher a { color: #192d44; }
+:root[data-theme="light"] .language-switcher a + a { border-left-color: rgba(25,45,68,.16); }
+:root[data-theme="light"] .language-switcher a:hover, :root[data-theme="light"] .language-switcher a:focus-visible, :root[data-theme="light"] .language-switcher a[aria-current="page"] { background: rgba(255,255,255,.9); color: #192d44; }
 :root[data-theme="light"] .hero--cartridges, :root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.74) 42%, rgba(244,239,228,.22) 66%, rgba(244,239,228,.03) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
 :root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.74) 42%, rgba(244,239,228,.22) 66%, rgba(244,239,228,.03) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
 :root[data-theme="light"] .hero--ink-check-local-ink, :root[data-theme="light"] .hero--ink-identify-cartridge, :root[data-theme="light"] .hero--ink-small-business-printer, :root[data-theme="light"] .hero--ink-refill-replacement { background-size: cover; }
@@ -346,7 +367,10 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   .appearance-toggle { min-height: 40px; padding: .55rem .7rem; font-size: .58rem; }
   .audio-guides-link { min-height: 40px; padding: .55rem .7rem; font-size: .58rem; }
   .language-switcher { min-height: 40px; align-self: center; }
-  .language-switcher a { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; padding: .55rem .6rem; }
+  .language-switcher::before { padding-inline: .58rem; font-size: .57rem; }
+  .language-switcher a { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; padding: .55rem .6rem; font-size: 0; }
+  .language-switcher a[lang="en"]::after { font-size: .58rem; letter-spacing: .04em; content: "English"; }
+  .language-switcher a[lang="af"]::after { font-size: .58rem; letter-spacing: .04em; content: "Afrikaans"; }
   .audio-hero { padding: 5rem 0 3.75rem; }
   .audio-section { padding: 4rem 0 5rem; }
   .audio-card { min-height: 0; padding: 1.3rem; }
