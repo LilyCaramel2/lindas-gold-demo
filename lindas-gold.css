@@ -18,17 +18,17 @@
 
 /* Light appearance: keep the same Gold Wanted navy, silver-white and warm-gold hierarchy on a paper-cream screen. */
 :root[data-theme="light"] {
-  --ink-950: #f4efe4;
-  --ink-900: #eef1f6;
-  --ink-800: #e4ebf2;
-  --ink-700: #cad8e7;
-  --silver: #192d44;
-  --silver-muted: #153f6c;
-  --paper: #f4efe4;
-  --paper-ink: #192d44;
-  --line: rgba(25, 45, 68, .16);
-  --glass: rgba(255, 255, 255, .62);
-  --shadow: 0 20px 52px rgba(25, 45, 68, .14);
+  --ink-950: #f7f3e8;
+  --ink-900: #0a2472;
+  --ink-800: #a6e1fa;
+  --ink-700: #0a2472;
+  --silver: #0a2472;
+  --silver-muted: #0a2472;
+  --paper: #f7f3e8;
+  --paper-ink: #0a2472;
+  --line: rgba(10, 36, 114, .18);
+  --glass: rgba(166, 225, 250, .72);
+  --shadow: 0 20px 52px rgba(10, 36, 114, .14);
 }
 
 * { box-sizing: border-box; }
@@ -286,70 +286,70 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 :root:not([data-theme="light"]) .contact-conversion__intro h2 { color: var(--silver); }
 :root:not([data-theme="light"]) .contact-conversion__intro > p { color: var(--silver-muted); }
 
-:root[data-theme="light"] .site-header { background: #d8eaf6; }
-:root[data-theme="light"] .site-footer { background: #0d2b4c; }
+:root[data-theme="light"] .site-header { background: #a6e1fa; }
+:root[data-theme="light"] .site-footer { background: #0a2472; }
 :root[data-theme="light"] .site-footer .brand-art--light { display: none; }
 :root[data-theme="light"] .site-footer .brand-art--dark { display: block; }
 :root[data-theme="light"] .site-footer p, :root[data-theme="light"] .footer-links a, :root[data-theme="light"] .footer-bottom { color: #eef1f6; }
-:root[data-theme="light"] .hero-content > p:not(.eyebrow), :root[data-theme="light"] .hero-trust, :root[data-theme="light"] .service-item p, :root[data-theme="light"] .journal-feature p, :root[data-theme="light"] .journal-list p, :root[data-theme="light"] .article-shell p, :root[data-theme="light"] .photo-split__content p, :root[data-theme="light"] .location-panel p { color: #153f6c; }
+:root[data-theme="light"] .hero-content > p:not(.eyebrow), :root[data-theme="light"] .hero-trust, :root[data-theme="light"] .service-item p, :root[data-theme="light"] .journal-feature p, :root[data-theme="light"] .journal-list p, :root[data-theme="light"] .article-shell p, :root[data-theme="light"] .photo-split__content p, :root[data-theme="light"] .location-panel p { color: #0a2472; }
 /* Light contrast fields: use filled pale blue and bounded navy reading fields, never a white wash over photography. */
-:root[data-theme="light"] .photo-split { background: linear-gradient(135deg, #a9d6f2, #cde9fb); }
-:root[data-theme="light"] .location-panel { background: linear-gradient(135deg, #8fc8ec, #b6ddf3); }
-:root[data-theme="light"] .cookie-banner { background: #a9d6f2; color: var(--paper-ink); }
-:root[data-theme="light"] .appearance-toggle { border-color: rgba(38,155,255,.54); background: #a9d6f2; }
-:root[data-theme="light"] .audio-guides-link { border-color: rgba(38,155,255,.62); background: #a9d6f2; color: var(--paper-ink); }
-:root[data-theme="light"] .audio-hero { background: radial-gradient(circle at 86% 15%, rgba(38,155,255,.24), transparent 24rem), linear-gradient(135deg, #eef1f6, #d8eaf6); }
-:root[data-theme="light"] .audio-card, :root[data-theme="light"] .article-audio { background: linear-gradient(145deg, rgba(238,241,246,.9), rgba(211,235,250,.84)); }
-:root[data-theme="light"] .audio-card p:not(.audio-card__number) { color: #153f6c; }
-:root[data-theme="light"] .audio-language-link { border-color: rgba(38,155,255,.36); background: linear-gradient(135deg, rgba(238,241,246,.9), rgba(211,235,250,.9)); box-shadow: 0 16px 34px rgba(25,45,68,.1); }
-:root[data-theme="light"] .audio-language-link b { color: #192d44; }
-:root[data-theme="light"] .audio-language-link small { color: #153f6c; }
+:root[data-theme="light"] .photo-split { background: #a6e1fa; }
+:root[data-theme="light"] .location-panel { background: #a6e1fa; }
+:root[data-theme="light"] .cookie-banner { background: #a6e1fa; color: var(--paper-ink); }
+:root[data-theme="light"] .appearance-toggle { border-color: rgba(0,92,178,.54); background: #a6e1fa; }
+:root[data-theme="light"] .audio-guides-link { border-color: rgba(0,92,178,.62); background: #a6e1fa; color: var(--paper-ink); }
+:root[data-theme="light"] .audio-hero { background: #f7f3e8; }
+:root[data-theme="light"] .audio-card, :root[data-theme="light"] .article-audio { background: #a6e1fa; }
+:root[data-theme="light"] .audio-card p:not(.audio-card__number) { color: #0a2472; }
+:root[data-theme="light"] .audio-language-link { border-color: rgba(0,92,178,.36); background: #a6e1fa; box-shadow: 0 16px 34px rgba(10,36,114,.1); }
+:root[data-theme="light"] .audio-language-link b { color: #0a2472; }
+:root[data-theme="light"] .audio-language-link small { color: #0a2472; }
 
 /* Light blue appearance: readable filled blue surfaces, deep navy anchors and visible imagery. */
-:root[data-theme="light"] body { background: #eef1f6; }
-:root[data-theme="light"] .section { background: linear-gradient(180deg, #eef1f6, #d8eaf6); }
-:root[data-theme="light"] .section--navy { background: radial-gradient(circle at 88% 10%, rgba(38,155,255,.19), transparent 26rem), #081c35; }
+:root[data-theme="light"] body { background: #f7f3e8; }
+:root[data-theme="light"] .section { background: #f7f3e8; }
+:root[data-theme="light"] .section--navy { background: #0a2472; }
 :root[data-theme="light"] .section--navy h1, :root[data-theme="light"] .section--navy h2, :root[data-theme="light"] .section--navy h3 { color: #eef1f6; }
-:root[data-theme="light"] .section--navy .section-lead > p, :root[data-theme="light"] .section--navy .journal-card__body p:not(.article-tag) { color: #b9c4d4; }
-:root[data-theme="light"] .section--navy .journal-card { border-color: rgba(238,241,246,.17); background: linear-gradient(145deg, rgba(20,66,109,.66), rgba(5,22,44,.46)); }
-:root[data-theme="light"] .service-item { border-color: rgba(38,155,255,.58); background: linear-gradient(145deg, #a9d6f2, #cde9fb); box-shadow: 0 20px 44px rgba(25,45,68,.16); }
-:root[data-theme="light"] .service-item h3 { color: #05162c; }
-:root[data-theme="light"] .service-item p { color: #0d2b4c; }
-:root[data-theme="light"] .service-item .service-link { color: #05162c; }
-:root[data-theme="light"] .journal-card { border-color: rgba(38,155,255,.42); background: linear-gradient(145deg, #a9d6f2, #cde9fb); box-shadow: 0 20px 44px rgba(25,45,68,.13); }
-:root[data-theme="light"] .journal-card__body p:not(.article-tag) { color: #153f6c; }
-:root[data-theme="light"] .journal-card__link { color: #8e6a2f; }
-:root[data-theme="light"] .hero--home { background-image: linear-gradient(90deg, rgba(143,200,236,.96) 0%, rgba(38,155,255,.78) 42%, rgba(38,155,255,.28) 72%, rgba(38,155,255,.06) 100%), url("images/gw-home-hero-1600x900.png"); }
-:root[data-theme="light"] .hero--home .hero-content { width: 100%; max-width: none; margin-left: 0; padding: clamp(2rem, 4vw, 4rem) max(2rem, 8vw); border-top: 1px solid rgba(21,63,108,.34); border-bottom: 1px solid rgba(21,63,108,.34); background: none; box-shadow: none; }
-:root[data-theme="light"] .hero--home h1, :root[data-theme="light"] .hero--home .hero-content > p:not(.eyebrow) { color: #05162c; text-shadow: none; }
-:root[data-theme="light"] .hero--home .hero-trust { color: #153f6c; }
-:root[data-theme="light"] .hero-language-link { border-color: rgba(21,63,108,.58); background: rgba(238,241,246,.42); box-shadow: none; color: #05162c; }
-:root[data-theme="light"] .hero-language-link a { color: #05162c; }
-:root[data-theme="light"] .hero--home .btn-outline { border-color: rgba(21,63,108,.58); background: rgba(238,241,246,.42); color: #05162c; }
-:root[data-theme="light"] .language-switcher { border-color: rgba(38,155,255,.35); background: rgba(211,235,250,.82); }
-:root[data-theme="light"] .language-switcher::before { border-right-color: rgba(25,45,68,.16); color: #806525; }
-:root[data-theme="light"] .language-switcher a { color: #192d44; }
-:root[data-theme="light"] .language-switcher a + a { border-left-color: rgba(25,45,68,.16); }
-:root[data-theme="light"] .language-switcher a:hover, :root[data-theme="light"] .language-switcher a:focus-visible, :root[data-theme="light"] .language-switcher a[aria-current="page"] { background: rgba(238,241,246,.94); color: #192d44; }
-:root[data-theme="light"] .hero--cartridges, :root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(13,43,76,.94) 0%, rgba(21,63,108,.76) 42%, rgba(21,63,108,.22) 66%, rgba(21,63,108,.03) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
-:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(13,43,76,.94) 0%, rgba(21,63,108,.76) 42%, rgba(21,63,108,.22) 66%, rgba(21,63,108,.03) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
+:root[data-theme="light"] .section--navy .section-lead > p, :root[data-theme="light"] .section--navy .journal-card__body p:not(.article-tag) { color: #eef1f6; }
+:root[data-theme="light"] .section--navy .journal-card { border-color: rgba(166,225,250,.42); background: rgba(10,36,114,.72); }
+:root[data-theme="light"] .service-item { border-color: rgba(0,92,178,.52); background: rgba(166,225,250,.78); box-shadow: 0 20px 44px rgba(10,36,114,.14); backdrop-filter: blur(16px); }
+:root[data-theme="light"] .service-item h3 { color: #0a2472; }
+:root[data-theme="light"] .service-item p { color: #0a2472; }
+:root[data-theme="light"] .service-item .service-link { color: #0a2472; }
+:root[data-theme="light"] .journal-card { border-color: rgba(0,92,178,.48); background: rgba(166,225,250,.78); box-shadow: 0 20px 44px rgba(10,36,114,.12); backdrop-filter: blur(16px); }
+:root[data-theme="light"] .journal-card__body p:not(.article-tag) { color: #0a2472; }
+:root[data-theme="light"] .journal-card__link { color: #0a2472; }
+:root[data-theme="light"] .hero--home { background-image: linear-gradient(90deg, rgba(166,225,250,.78) 0%, rgba(166,225,250,.54) 32%, rgba(166,225,250,.12) 62%, rgba(166,225,250,0) 100%), url("images/gw-home-hero-1600x900.png"); }
+:root[data-theme="light"] .hero--home .hero-content { width: 100%; max-width: none; margin-left: 0; padding: clamp(2rem, 4vw, 4rem) max(2rem, 8vw); border-top: 1px solid rgba(0,92,178,.38); border-bottom: 1px solid rgba(0,92,178,.38); background: rgba(247,243,232,.36); box-shadow: none; }
+:root[data-theme="light"] .hero--home h1, :root[data-theme="light"] .hero--home .hero-content > p:not(.eyebrow) { color: #0a2472; text-shadow: none; }
+:root[data-theme="light"] .hero--home .hero-trust { color: #0a2472; }
+:root[data-theme="light"] .hero-language-link { border-color: rgba(0,92,178,.52); background: rgba(247,243,232,.72); box-shadow: none; color: #0a2472; }
+:root[data-theme="light"] .hero-language-link a { color: #0a2472; }
+:root[data-theme="light"] .hero--home .btn-outline { border-color: rgba(0,92,178,.52); background: rgba(247,243,232,.72); color: #0a2472; }
+:root[data-theme="light"] .language-switcher { border-color: rgba(0,92,178,.38); background: rgba(166,225,250,.78); }
+:root[data-theme="light"] .language-switcher::before { border-right-color: rgba(10,36,114,.18); color: #0a2472; }
+:root[data-theme="light"] .language-switcher a { color: #0a2472; }
+:root[data-theme="light"] .language-switcher a + a { border-left-color: rgba(10,36,114,.18); }
+:root[data-theme="light"] .language-switcher a:hover, :root[data-theme="light"] .language-switcher a:focus-visible, :root[data-theme="light"] .language-switcher a[aria-current="page"] { background: rgba(247,243,232,.9); color: #0a2472; }
+:root[data-theme="light"] .hero--cartridges, :root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(166,225,250,.8) 0%, rgba(166,225,250,.52) 34%, rgba(166,225,250,.12) 66%, rgba(166,225,250,0) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
+:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(166,225,250,.8) 0%, rgba(166,225,250,.52) 34%, rgba(166,225,250,.12) 66%, rgba(166,225,250,0) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
 :root[data-theme="light"] .hero--ink-check-local-ink, :root[data-theme="light"] .hero--ink-identify-cartridge, :root[data-theme="light"] .hero--ink-small-business-printer, :root[data-theme="light"] .hero--ink-refill-replacement { background-size: cover; }
-:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(13,43,76,.94) 0%, rgba(21,63,108,.74) 44%, rgba(21,63,108,.18) 68%, rgba(21,63,108,.02) 100%), url("images/gw-blog-check-local-ink-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(13,43,76,.94) 0%, rgba(21,63,108,.74) 44%, rgba(21,63,108,.18) 68%, rgba(21,63,108,.02) 100%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(13,43,76,.94) 0%, rgba(21,63,108,.74) 44%, rgba(21,63,108,.18) 68%, rgba(21,63,108,.02) 100%), url("images/gw-blog-small-business-printer-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(13,43,76,.94) 0%, rgba(21,63,108,.74) 44%, rgba(21,63,108,.18) 68%, rgba(21,63,108,.02) 100%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
-:root[data-theme="light"] .hero-visit-card { background: #8fc8ec; border-color: rgba(21,63,108,.58); }
-:root[data-theme="light"] .hero-visit-card b { color: #05162c; }
-:root[data-theme="light"] .hero-visit-card small { color: #153f6c; }
-:root[data-theme="light"] .btn-outline { border-color: rgba(38,155,255,.46); background: rgba(211,235,250,.7); color: #192d44; }
-:root[data-theme="light"] .local-band { background: #8fc8ec; }
-:root[data-theme="light"] .tag-row span { border-color: rgba(38,155,255,.36); background: rgba(38,155,255,.1); color: #192d44; }
-:root[data-theme="light"] .contact-conversion { background: linear-gradient(135deg, #8fc8ec, #b6ddf3); }
-:root[data-theme="light"] .inquiry-form { border-color: rgba(38,155,255,.58); background: #a9d6f2; box-shadow: 0 20px 44px rgba(25,45,68,.13); }
-:root[data-theme="light"] .inquiry-form .form-control { border-color: rgba(38,155,255,.48); background: #eef1f6; color: #192d44; }
-:root[data-theme="light"] .inquiry-form label, :root[data-theme="light"] .form-helper { color: #153f6c; }
-:root[data-theme="light"] .reviews-link-card { border-color: rgba(38,155,255,.3); background: rgba(211,235,250,.66); box-shadow: 0 15px 34px rgba(25,45,68,.09); }
-:root[data-theme="light"] .reviews-link-card p:not(.service-label) { color: #153f6c; }
+:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(166,225,250,.8) 0%, rgba(166,225,250,.52) 34%, rgba(166,225,250,.12) 66%, rgba(166,225,250,0) 100%), url("images/gw-blog-check-local-ink-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(166,225,250,.8) 0%, rgba(166,225,250,.52) 34%, rgba(166,225,250,.12) 66%, rgba(166,225,250,0) 100%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(166,225,250,.8) 0%, rgba(166,225,250,.52) 34%, rgba(166,225,250,.12) 66%, rgba(166,225,250,0) 100%), url("images/gw-blog-small-business-printer-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(166,225,250,.8) 0%, rgba(166,225,250,.52) 34%, rgba(166,225,250,.12) 66%, rgba(166,225,250,0) 100%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
+:root[data-theme="light"] .hero-visit-card { background: rgba(166,225,250,.9); border-color: rgba(0,92,178,.52); }
+:root[data-theme="light"] .hero-visit-card b { color: #0a2472; }
+:root[data-theme="light"] .hero-visit-card small { color: #0a2472; }
+:root[data-theme="light"] .btn-outline { border-color: rgba(0,92,178,.46); background: rgba(166,225,250,.72); color: #0a2472; }
+:root[data-theme="light"] .local-band { background: #a6e1fa; }
+:root[data-theme="light"] .tag-row span { border-color: rgba(0,92,178,.36); background: rgba(166,225,250,.6); color: #0a2472; }
+:root[data-theme="light"] .contact-conversion { background: #a6e1fa; }
+:root[data-theme="light"] .inquiry-form { border-color: rgba(0,92,178,.58); background: #f7f3e8; box-shadow: 0 20px 44px rgba(10,36,114,.13); }
+:root[data-theme="light"] .inquiry-form .form-control { border-color: rgba(0,92,178,.48); background: #f7f3e8; color: #0a2472; }
+:root[data-theme="light"] .inquiry-form label, :root[data-theme="light"] .form-helper { color: #0a2472; }
+:root[data-theme="light"] .reviews-link-card { border-color: rgba(0,92,178,.3); background: rgba(166,225,250,.66); box-shadow: 0 15px 34px rgba(10,36,114,.09); }
+:root[data-theme="light"] .reviews-link-card p:not(.service-label) { color: #0a2472; }
 
 /* Responsive hero reading fields: dark mode may use translucent navy; light mode uses blue surfaces only. */
 @media (min-width: 801px) {
