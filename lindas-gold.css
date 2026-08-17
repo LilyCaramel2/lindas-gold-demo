@@ -387,3 +387,73 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   .cookie-banner p { margin-bottom: .5rem; }
   .cookie-actions { justify-content: flex-start; margin-top: .65rem; }
 }
+
+/* Theme repair — 17 August 2026.
+   Keep foreground and surface decisions explicit at theme boundaries. */
+
+/* Gold calls-to-action use a stable, readable foreground in both appearances. */
+.btn-gold {
+  color: #05162c;
+}
+
+/* Light appearance: small labels and chips must not inherit pale decorative colors. */
+:root[data-theme="light"] .eyebrow,
+:root[data-theme="light"] .article-tag,
+:root[data-theme="light"] .service-label,
+:root[data-theme="light"] .hero-visit-card small,
+:root[data-theme="light"] .contact-note,
+:root[data-theme="light"] .audio-card__number,
+:root[data-theme="light"] .photo-split__content b {
+  color: #73551f;
+}
+
+:root[data-theme="light"] .tag-row span {
+  color: #192d44;
+  background: #f6f1ea;
+  border-color: rgba(25, 45, 68, .28);
+}
+
+/* Dark appearance: the photographic local band needs a dark overlay and complete text pair. */
+:root:not([data-theme="light"]) .local-band {
+  background:
+    linear-gradient(90deg,
+      rgba(5, 22, 44, .97) 0%,
+      rgba(5, 22, 44, .88) 58%,
+      rgba(5, 22, 44, .66) 100%),
+    url("images/gw-spare-shopfront-800x800.png") right / cover;
+}
+
+:root:not([data-theme="light"]) .local-band h2 {
+  color: #eef1f6;
+}
+
+:root:not([data-theme="light"]) .local-band p:not(.eyebrow) {
+  color: #d5dce5;
+}
+
+/* Dark chips use their own raised surface instead of a translucent white chip. */
+:root:not([data-theme="light"]) .tag-row span {
+  color: #eef1f6;
+  background: #153f6c;
+  border-color: rgba(238, 241, 246, .30);
+}
+
+:root:not([data-theme="light"]) .local-band .btn-outline {
+  color: #eef1f6;
+  background: rgba(5, 22, 44, .60);
+  border-color: rgba(238, 241, 246, .46);
+}
+
+/* The dark contact experience uses a dark conversion surface and raised form. */
+:root:not([data-theme="light"]) .contact-conversion {
+  background: linear-gradient(135deg, #081c35, #0d2b4c);
+}
+
+:root:not([data-theme="light"]) .contact-conversion__intro > p {
+  color: #d5dce5;
+}
+
+:root:not([data-theme="light"]) .inquiry-form {
+  background: rgba(5, 22, 44, .82);
+  border-color: rgba(238, 241, 246, .24);
+}
