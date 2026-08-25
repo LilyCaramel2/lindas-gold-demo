@@ -664,9 +664,17 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   background: rgba(244,239,228,.96);
 }
 :root[data-theme="light"] .site-header::after { background: linear-gradient(90deg, transparent, #b78f48, transparent); box-shadow: 0 0 13px rgba(183,143,72,.35); }
-:root[data-theme="light"] .main-nav .nav-link { color: #536476; }
+:root[data-theme="light"] .main-nav .nav-link { color: #192d44; }
 :root[data-theme="light"] .main-nav .nav-link:hover,
 :root[data-theme="light"] .main-nav .nav-link-active { color: #192d44; }
+:root[data-theme="light"] .language-switcher a,
+:root[data-theme="light"] .audio-guides-link,
+:root[data-theme="light"] .appearance-toggle { color: #192d44; }
+:root[data-theme="light"] .language-switcher a[aria-current="page"],
+:root[data-theme="light"] .audio-guides-link:hover,
+:root[data-theme="light"] .audio-guides-link:focus-visible,
+:root[data-theme="light"] .appearance-toggle:hover,
+:root[data-theme="light"] .appearance-toggle:focus-visible { color: #73551f; }
 
 @media (max-width: 1199px) {
   .nav-bar {
