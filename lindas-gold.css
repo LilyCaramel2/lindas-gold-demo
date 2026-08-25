@@ -98,7 +98,7 @@ p { margin: 0 0 1.15rem; }
 .hero-trust span::before { display: inline-block; width: .5rem; height: .5rem; margin-right: .4rem; border: 1px solid var(--harbour-light); border-radius: 50%; box-shadow: 0 0 9px rgba(38,155,255,.6); content: ""; }
 .hero--home { min-height: min(790px, calc(100vh - 78px)); background-position: center; background-image: linear-gradient(270deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.78) 32%, rgba(5,22,44,.24) 54%, rgba(5,22,44,.02) 74%), url("images/gw-home-hero-1600x900.png"); }
 .hero--home .hero-content { width: min(43%, 610px); margin-left: auto; }
-.hero--cartridges { background-image: linear-gradient(90deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.72) 55%, rgba(5,22,44,.24) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
+.hero--cartridges { background-image: linear-gradient(90deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.72) 55%, rgba(5,22,44,.24) 100%), url("images/gw-ink-tanks-and-refills-hero-1600x900.png"); }
 .hero--journal { background-image: linear-gradient(90deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.65) 55%, rgba(5,22,44,.26) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
 .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(5,22,44,.97) 0%, rgba(5,22,44,.88) 39%, rgba(5,22,44,.18) 100%), url("images/gw-blog-check-local-ink-1200x630.png"); }
 .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(5,22,44,.97) 0%, rgba(5,22,44,.88) 39%, rgba(5,22,44,.18) 100%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
@@ -339,6 +339,88 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   :root[data-theme="light"] .hero--home { background-image: linear-gradient(180deg, rgba(244,239,228,.1) 0%, rgba(244,239,228,.22) 35%, rgba(244,239,228,.83) 62%, rgba(244,239,228,.97) 100%), url("images/gw-home-hero-1600x900.png"); }
   :root[data-theme="light"] .hero--home::before { background: linear-gradient(180deg, transparent 0%, rgba(244,239,228,.08) 34%, rgba(244,239,228,.78) 59%, rgba(244,239,228,.96) 100%); }
   :root[data-theme="light"] .hero--home .hero-content { align-self: end; margin-bottom: .9rem; padding: 1.8rem 1.35rem 2rem; border: 1px solid rgba(21,63,108,.2); background: linear-gradient(180deg, rgba(255,255,255,.56), rgba(244,239,228,.94)); }
+}
+
+/* Final Harbour Paper control pass: light mode uses gold and paper surfaces, not dark navy blocks. */
+.photo-split__image--ink-tanks { background-image: url("images/gw-canon-445-446-check-photo-1200x900.png"); }
+.local-service-link { color: var(--gold); font-weight: 800; }
+
+:root[data-theme="light"] .section--navy {
+  background: radial-gradient(circle at 88% 10%, rgba(213,194,140,.4), transparent 26rem), linear-gradient(135deg, #e9e2d4 0%, #f0e5c7 52%, #edf2f4 100%);
+  border-block: 1px solid rgba(25,45,68,.13);
+}
+
+:root[data-theme="light"] .section--navy h1,
+:root[data-theme="light"] .section--navy h2,
+:root[data-theme="light"] .section--navy h3,
+:root[data-theme="light"] .fluid-band h1,
+:root[data-theme="light"] .fluid-band h2,
+:root[data-theme="light"] .fluid-band h3,
+:root[data-theme="light"] .photo-split h1,
+:root[data-theme="light"] .photo-split h2,
+:root[data-theme="light"] .photo-split h3,
+:root[data-theme="light"] .location-panel h1,
+:root[data-theme="light"] .location-panel h2,
+:root[data-theme="light"] .location-panel h3,
+:root[data-theme="light"] .inquiry-form h1,
+:root[data-theme="light"] .inquiry-form h2,
+:root[data-theme="light"] .inquiry-form h3,
+:root[data-theme="light"] .reviews-link-card h1,
+:root[data-theme="light"] .reviews-link-card h2,
+:root[data-theme="light"] .reviews-link-card h3,
+:root[data-theme="light"] .audio-card h1,
+:root[data-theme="light"] .audio-card h2,
+:root[data-theme="light"] .audio-card h3 {
+  color: #192d44;
+}
+
+:root[data-theme="light"] .section--navy .section-lead > p,
+:root[data-theme="light"] .section--navy .journal-card__body p:not(.article-tag),
+:root[data-theme="light"] .fluid-band p,
+:root[data-theme="light"] .photo-split p,
+:root[data-theme="light"] .location-panel p,
+:root[data-theme="light"] .inquiry-form p,
+:root[data-theme="light"] .reviews-link-card p,
+:root[data-theme="light"] .audio-card p {
+  color: #536476;
+}
+
+:root[data-theme="light"] .section--navy .journal-card,
+:root[data-theme="light"] .fluid-band,
+:root[data-theme="light"] .photo-split,
+:root[data-theme="light"] .location-panel,
+:root[data-theme="light"] .inquiry-form,
+:root[data-theme="light"] .reviews-link-card,
+:root[data-theme="light"] .article-audio,
+:root[data-theme="light"] .audio-card,
+:root[data-theme="light"] .contact-form-wrapper,
+:root[data-theme="light"] .map-container {
+  border-color: rgba(25,45,68,.17);
+  background: linear-gradient(135deg, rgba(247,240,225,.96), rgba(240,229,199,.9) 52%, rgba(237,242,244,.94));
+  box-shadow: 0 18px 40px rgba(25,45,68,.1);
+}
+
+:root[data-theme="light"] .hero--cartridges {
+  background-image: linear-gradient(90deg, rgba(230,213,166,.9) 0%, rgba(244,239,228,.72) 31%, rgba(244,239,228,.24) 49%, rgba(244,239,228,.02) 68%), url("images/gw-ink-tanks-and-refills-hero-1600x900.png");
+}
+
+:root[data-theme="light"] .photo-split {
+  background: linear-gradient(135deg, #f7f0e1 0%, #f0e5c7 52%, #edf2f4 100%);
+}
+
+:root[data-theme="light"] .site-footer {
+  background: linear-gradient(90deg, #e9e2d4, #f0e5c7);
+}
+
+@media (max-width: 620px) {
+  :root[data-theme="light"] .nav-link,
+  :root[data-theme="light"] .language-switcher,
+  :root[data-theme="light"] .appearance-toggle,
+  :root[data-theme="light"] .audio-guides-link {
+    border-color: rgba(25,45,68,.18);
+    background: rgba(255,253,248,.76);
+    color: #192d44;
+  }
 }
 
 /* Mobile navigation: single horizontal row of clear touch targets without changing the protected logo artwork. */
