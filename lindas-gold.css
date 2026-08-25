@@ -96,14 +96,14 @@ p { margin: 0 0 1.15rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.7rem; }
 .hero-trust { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.25rem; color: var(--silver-muted); font-size: .78rem; }
 .hero-trust span::before { display: inline-block; width: .5rem; height: .5rem; margin-right: .4rem; border: 1px solid var(--harbour-light); border-radius: 50%; box-shadow: 0 0 9px rgba(38,155,255,.6); content: ""; }
-.hero--home { min-height: min(790px, calc(100vh - 78px)); background-position: center; background-image: linear-gradient(270deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.78) 32%, rgba(5,22,44,.24) 54%, rgba(5,22,44,.02) 74%), url("images/gw-home-hero-1600x900.png"); }
+.hero--home { min-height: min(790px, calc(100vh - 78px)); background-position: center; background-image: linear-gradient(270deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.78) 32%, rgba(5,22,44,.24) 54%, rgba(5,22,44,.02) 74%), url("images/gw-home-hero-1600x900.webp"); }
 .hero--home .hero-content { width: min(43%, 610px); margin-left: auto; }
-.hero--cartridges { background-image: linear-gradient(90deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.72) 55%, rgba(5,22,44,.24) 100%), url("images/gw-ink-tanks-and-refills-hero-1600x900.png"); }
-.hero--journal { background-image: linear-gradient(90deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.65) 55%, rgba(5,22,44,.26) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
-.hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(5,22,44,.97) 0%, rgba(5,22,44,.88) 39%, rgba(5,22,44,.18) 100%), url("images/gw-blog-check-local-ink-1200x630.png"); }
-.hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(5,22,44,.97) 0%, rgba(5,22,44,.88) 39%, rgba(5,22,44,.18) 100%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
-.hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(5,22,44,.97) 0%, rgba(5,22,44,.88) 39%, rgba(5,22,44,.18) 100%), url("images/gw-blog-small-business-printer-1200x630.png"); }
-.hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(5,22,44,.97) 0%, rgba(5,22,44,.88) 39%, rgba(5,22,44,.18) 100%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
+.hero--cartridges { background-image: linear-gradient(90deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.72) 55%, rgba(5,22,44,.24) 100%), url("images/gw-ink-tanks-and-refills-hero-1600x900.webp"); }
+.hero--journal { background-image: linear-gradient(90deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.65) 55%, rgba(5,22,44,.26) 100%), url("images/gw-blog-index-hero-1600x900.webp"); }
+.hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(5,22,44,.97) 0%, rgba(5,22,44,.88) 39%, rgba(5,22,44,.18) 100%), url("images/gw-blog-check-local-ink-1200x630.webp"); }
+.hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(5,22,44,.97) 0%, rgba(5,22,44,.88) 39%, rgba(5,22,44,.18) 100%), url("images/gw-blog-identify-cartridge-1200x630.webp"); }
+.hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(5,22,44,.97) 0%, rgba(5,22,44,.88) 39%, rgba(5,22,44,.18) 100%), url("images/gw-blog-small-business-printer-1200x630.webp"); }
+.hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(5,22,44,.97) 0%, rgba(5,22,44,.88) 39%, rgba(5,22,44,.18) 100%), url("images/gw-blog-refill-or-replacement-1200x630.webp"); }
 .hero-logo { position: absolute; right: max(4vw, 2rem); bottom: 3.5rem; width: 150px; padding: .9rem; border: 1px solid var(--line); border-radius: 1rem; background: rgba(5,22,44,.55); box-shadow: var(--shadow); backdrop-filter: blur(12px); }
 .hero-logo img { border-radius: 50%; }
 .hero-visit-card { position: absolute; right: max(4vw, 2rem); bottom: 3.5rem; display: grid; grid-template-columns: 46px 1fr auto; gap: .75rem; align-items: center; width: min(285px, calc(100% - 3rem)); padding: .75rem .9rem; border: 1px solid rgba(213,194,140,.55); border-radius: .9rem; background: rgba(5,22,44,.78); box-shadow: var(--shadow); backdrop-filter: blur(12px); transition: transform 160ms ease-out, border-color 160ms ease-out; }
@@ -134,7 +134,7 @@ p { margin: 0 0 1.15rem; }
 .service-label { color: var(--gold); font-size: .65rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
 .service-link { position: absolute; bottom: 1.8rem; color: var(--silver); font-size: .72rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
 .photo-split { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; margin: 6.5rem 0; border: 1px solid var(--line); border-radius: 1.35rem; background: linear-gradient(135deg, rgba(20,67,110,.4), rgba(5,22,44,.8)); }
-.photo-split__image { min-height: 450px; background: url("images/gw-cartridges-hero-1600x900.png") center/cover; }
+.photo-split__image { min-height: 450px; background: url("images/gw-cartridges-hero-1600x900.webp") center/cover; }
 .photo-split__content { align-self: center; padding: clamp(2rem,6vw,4.5rem); }
 .photo-split__content p { color: var(--silver-muted); }
 .photo-split__content ol { display: grid; gap: .85rem; padding: 0; list-style: none; color: var(--silver); }
@@ -257,13 +257,13 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 :root[data-theme="light"] .site-header { background: #f4efe4; }
 :root[data-theme="light"] .site-footer { background: #e4ebf2; }
 :root[data-theme="light"] .site-footer p, :root[data-theme="light"] .footer-links a, :root[data-theme="light"] .footer-bottom { color: #536476; }
-:root[data-theme="light"] .hero--home { background-image: linear-gradient(270deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 34%, rgba(244,239,228,.36) 56%, rgba(244,239,228,.02) 76%), url("images/gw-home-hero-1600x900.png"); }
-:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.86) 55%, rgba(244,239,228,.42) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
-:root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.82) 55%, rgba(244,239,228,.4) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
-:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 44%, rgba(244,239,228,.24) 100%), url("images/gw-blog-check-local-ink-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 44%, rgba(244,239,228,.24) 100%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 44%, rgba(244,239,228,.24) 100%), url("images/gw-blog-small-business-printer-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 44%, rgba(244,239,228,.24) 100%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
+:root[data-theme="light"] .hero--home { background-image: linear-gradient(270deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 34%, rgba(244,239,228,.36) 56%, rgba(244,239,228,.02) 76%), url("images/gw-home-hero-1600x900.webp"); }
+:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.86) 55%, rgba(244,239,228,.42) 100%), url("images/gw-cartridges-hero-1600x900.webp"); }
+:root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.82) 55%, rgba(244,239,228,.4) 100%), url("images/gw-blog-index-hero-1600x900.webp"); }
+:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 44%, rgba(244,239,228,.24) 100%), url("images/gw-blog-check-local-ink-1200x630.webp"); }
+:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 44%, rgba(244,239,228,.24) 100%), url("images/gw-blog-identify-cartridge-1200x630.webp"); }
+:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 44%, rgba(244,239,228,.24) 100%), url("images/gw-blog-small-business-printer-1200x630.webp"); }
+:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(244,239,228,.98) 0%, rgba(244,239,228,.9) 44%, rgba(244,239,228,.24) 100%), url("images/gw-blog-refill-or-replacement-1200x630.webp"); }
 :root[data-theme="light"] .hero-content > p:not(.eyebrow), :root[data-theme="light"] .hero-trust, :root[data-theme="light"] .service-item p, :root[data-theme="light"] .journal-feature p, :root[data-theme="light"] .journal-list p, :root[data-theme="light"] .article-shell p, :root[data-theme="light"] .photo-split__content p, :root[data-theme="light"] .location-panel p { color: #536476; }
 :root[data-theme="light"] .photo-split { background: linear-gradient(135deg, rgba(255,255,255,.94), rgba(228,235,242,.9)); }
 :root[data-theme="light"] .location-panel { background: linear-gradient(135deg, rgba(38,155,255,.12), rgba(255,255,255,.76)); }
@@ -287,13 +287,13 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 :root[data-theme="light"] .hero--home h1 { color: #1c5689; text-shadow: 0 1px 0 rgba(255,255,255,.92); }
 :root[data-theme="light"] .hero--home .eyebrow { color: #8e6a2f; }
 :root[data-theme="light"] .hero--home .hero-content > p:not(.eyebrow) { color: #294a69; font-weight: 650; text-shadow: 0 1px 0 rgba(255,255,255,.78); }
-:root[data-theme="light"] .hero--cartridges, :root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.74) 42%, rgba(244,239,228,.22) 66%, rgba(244,239,228,.03) 100%), url("images/gw-blog-index-hero-1600x900.png"); }
-:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.74) 42%, rgba(244,239,228,.22) 66%, rgba(244,239,228,.03) 100%), url("images/gw-cartridges-hero-1600x900.png"); }
+:root[data-theme="light"] .hero--cartridges, :root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.74) 42%, rgba(244,239,228,.22) 66%, rgba(244,239,228,.03) 100%), url("images/gw-blog-index-hero-1600x900.webp"); }
+:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.74) 42%, rgba(244,239,228,.22) 66%, rgba(244,239,228,.03) 100%), url("images/gw-cartridges-hero-1600x900.webp"); }
 :root[data-theme="light"] .hero--ink-check-local-ink, :root[data-theme="light"] .hero--ink-identify-cartridge, :root[data-theme="light"] .hero--ink-small-business-printer, :root[data-theme="light"] .hero--ink-refill-replacement { background-size: cover; }
-:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-check-local-ink-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-small-business-printer-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-check-local-ink-1200x630.webp"); }
+:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-identify-cartridge-1200x630.webp"); }
+:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-small-business-printer-1200x630.webp"); }
+:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(244,239,228,.95) 0%, rgba(244,239,228,.73) 44%, rgba(244,239,228,.18) 68%, rgba(244,239,228,.02) 100%), url("images/gw-blog-refill-or-replacement-1200x630.webp"); }
 :root[data-theme="light"] .hero-visit-card { background: rgba(244,239,228,.9); border-color: rgba(25,45,68,.24); }
 :root[data-theme="light"] .hero-visit-card b { color: #192d44; }
 :root[data-theme="light"] .btn-outline { border-color: rgba(25,45,68,.32); background: rgba(255,255,255,.48); color: #192d44; }
@@ -317,7 +317,7 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   .nav-link { font-size: .57rem; }
   .hero { min-height: 570px; }
   .hero-content { padding: 5rem 0; }
-  .hero--home { background-image: linear-gradient(180deg, rgba(5,22,44,.68), rgba(5,22,44,.88)), url("images/gw-home-hero-1600x900.png"); }
+  .hero--home { background-image: linear-gradient(180deg, rgba(5,22,44,.68), rgba(5,22,44,.88)), url("images/gw-home-hero-1600x900.webp"); }
   .hero--home .hero-content { width: calc(100% - 3rem); margin: 0 auto; }
   .hero-logo { right: 1rem; bottom: 1rem; width: 105px; }
   .hero-visit-card { right: 1rem; bottom: 1rem; width: min(260px, calc(100% - 2rem)); }
@@ -339,7 +339,7 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 }
 
 /* Final Harbour Paper control pass: light mode uses gold and paper surfaces, not dark navy blocks. */
-.photo-split__image--ink-tanks { background-image: url("images/gw-canon-445-446-check-photo-1200x900.png"); }
+.photo-split__image--ink-tanks { background-image: url("images/gw-canon-445-446-check-photo-1200x900.webp"); }
 .local-service-link { color: var(--gold); font-weight: 800; }
 
 :root[data-theme="light"] .section--navy {
@@ -398,7 +398,7 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 }
 
 :root[data-theme="light"] .hero--cartridges {
-  background-image: linear-gradient(90deg, rgba(230,213,166,.9) 0%, rgba(244,239,228,.72) 31%, rgba(244,239,228,.24) 49%, rgba(244,239,228,.02) 68%), url("images/gw-ink-tanks-and-refills-hero-1600x900.png");
+  background-image: linear-gradient(90deg, rgba(230,213,166,.9) 0%, rgba(244,239,228,.72) 31%, rgba(244,239,228,.24) 49%, rgba(244,239,228,.02) 68%), url("images/gw-ink-tanks-and-refills-hero-1600x900.webp");
 }
 
 :root[data-theme="light"] .photo-split {
@@ -434,7 +434,7 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 }
 
 :root[data-theme="light"] .local-band::before {
-  background: url("images/gw-spare-shopfront-800x800.png") right/cover;
+  background: url("images/gw-spare-shopfront-800x800.webp") right/cover;
 }
 
 :root[data-theme="light"] .local-band::after {
@@ -785,15 +785,15 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 
 /* Preserve local photography: the light overlay is confined to the copy side. */
 :root[data-theme="light"] .hero--home {
-  background-image: linear-gradient(270deg, rgba(244,239,228,.9) 0%, rgba(244,239,228,.62) 28%, rgba(244,239,228,.18) 54%, rgba(244,239,228,.02) 70%), url("images/gw-home-hero-1600x900.png");
+  background-image: linear-gradient(270deg, rgba(244,239,228,.9) 0%, rgba(244,239,228,.62) 28%, rgba(244,239,228,.18) 54%, rgba(244,239,228,.02) 70%), url("images/gw-home-hero-1600x900.webp");
 }
 
-:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-ink-tanks-and-refills-hero-1600x900.png"); }
-:root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-index-hero-1600x900.png"); }
-:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-check-local-ink-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-small-business-printer-1200x630.png"); }
-:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
+:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-ink-tanks-and-refills-hero-1600x900.webp"); }
+:root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-index-hero-1600x900.webp"); }
+:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-check-local-ink-1200x630.webp"); }
+:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-identify-cartridge-1200x630.webp"); }
+:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-small-business-printer-1200x630.webp"); }
+:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-refill-or-replacement-1200x630.webp"); }
 
 :root[data-theme="light"] .local-band::after {
   background: linear-gradient(90deg, rgba(244,239,228,.88) 0%, rgba(240,229,199,.58) 52%, rgba(240,229,199,.16) 100%);
@@ -805,14 +805,14 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   }
 
   :root[data-theme="light"] .hero--home {
-    background-image: linear-gradient(180deg, rgba(244,239,228,.14) 0%, rgba(244,239,228,.34) 48%, rgba(244,239,228,.78) 100%), url("images/gw-home-hero-1600x900.png");
+    background-image: linear-gradient(180deg, rgba(244,239,228,.14) 0%, rgba(244,239,228,.34) 48%, rgba(244,239,228,.78) 100%), url("images/gw-home-hero-1600x900.webp");
   }
 }
 
 
 /* Final light-screen balance: preserve the photograph first, then use restrained structural ink. */
 :root[data-theme="light"] .hero--home {
-  background-image: linear-gradient(270deg, rgba(244,239,228,.72) 0%, rgba(244,239,228,.42) 28%, rgba(244,239,228,.1) 54%, rgba(244,239,228,.01) 70%), url("images/gw-home-hero-1600x900.png");
+  background-image: linear-gradient(270deg, rgba(244,239,228,.72) 0%, rgba(244,239,228,.42) 28%, rgba(244,239,228,.1) 54%, rgba(244,239,228,.01) 70%), url("images/gw-home-hero-1600x900.webp");
 }
 
 :root[data-theme="light"] .hero--home .hero-content > p:not(.eyebrow),
@@ -835,7 +835,7 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 
 @media (max-width: 800px) {
   :root[data-theme="light"] .hero--home {
-    background-image: linear-gradient(180deg, rgba(244,239,228,.08) 0%, rgba(244,239,228,.18) 48%, rgba(244,239,228,.52) 100%), url("images/gw-home-hero-1600x900.png");
+    background-image: linear-gradient(180deg, rgba(244,239,228,.08) 0%, rgba(244,239,228,.18) 48%, rgba(244,239,228,.52) 100%), url("images/gw-home-hero-1600x900.webp");
   }
 }
 
@@ -882,7 +882,7 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 }
 
 :root[data-theme="light"] .hero--home {
-  background-image: linear-gradient(270deg, rgba(244,239,228,.64) 0%, rgba(244,239,228,.34) 26%, rgba(244,239,228,.08) 52%, rgba(244,239,228,0) 70%), url("images/gw-home-hero-1600x900.png");
+  background-image: linear-gradient(270deg, rgba(244,239,228,.64) 0%, rgba(244,239,228,.34) 26%, rgba(244,239,228,.08) 52%, rgba(244,239,228,0) 70%), url("images/gw-home-hero-1600x900.webp");
 }
 
 :root[data-theme="light"] .local-band::after {
@@ -952,7 +952,7 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
 
 @media (max-width: 800px) {
   :root[data-theme="light"] .hero--home {
-    background-image: linear-gradient(180deg, rgba(244,239,228,.06) 0%, rgba(244,239,228,.14) 46%, rgba(244,239,228,.42) 100%), url("images/gw-home-hero-1600x900.png");
+    background-image: linear-gradient(180deg, rgba(244,239,228,.06) 0%, rgba(244,239,228,.14) 46%, rgba(244,239,228,.42) 100%), url("images/gw-home-hero-1600x900.webp");
   }
 
   .footer-bottom {
