@@ -713,3 +713,120 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   .main-nav { gap: .75rem; }
   .nav-link { font-size: .59rem; }
 }
+
+
+/* Light-screen material balance: navy anchors are coordinated through rules and rails, never isolated dark blocks. */
+:root[data-theme="light"] .section--navy {
+  border-block: 1px solid rgba(25,45,68,.22);
+  background: linear-gradient(135deg, #f4efe4 0%, #f0e5c7 58%, #edf2f4 100%);
+}
+
+:root[data-theme="light"] .section--navy::before {
+  display: block;
+  width: min(5rem, 18vw);
+  height: 2px;
+  margin-bottom: -2px;
+  background: #192d44;
+  content: "";
+}
+
+:root[data-theme="light"] .contact-conversion--home {
+  position: relative;
+  overflow: hidden;
+  border-top: 6px solid #192d44;
+  border-bottom: 1px solid rgba(25,45,68,.24);
+  background: linear-gradient(135deg, #f4efe4 0%, #f0e5c7 56%, #e7edf1 100%);
+}
+
+:root[data-theme="light"] .contact-conversion--home::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: clamp(.35rem, 1vw, .7rem);
+  background: #b78f48;
+  content: "";
+}
+
+:root[data-theme="light"] .contact-conversion--home .contact-conversion__intro {
+  padding-left: clamp(.9rem, 2vw, 1.6rem);
+  border-left: 1px solid rgba(25,45,68,.28);
+}
+
+:root[data-theme="light"] .contact-conversion--home .inquiry-form {
+  border-top: 2px solid #b78f48;
+  border-color: rgba(25,45,68,.24);
+  background: linear-gradient(145deg, rgba(255,253,248,.98), rgba(240,229,199,.94));
+  box-shadow: 0 18px 38px rgba(25,45,68,.12);
+}
+
+:root[data-theme="light"] .contact-conversion--home .form-control {
+  border: 1px solid rgba(25,45,68,.3);
+  background: rgba(255,253,248,.96);
+  color: #192d44;
+  caret-color: #b78f48;
+}
+
+:root[data-theme="light"] .contact-conversion--home .form-control::placeholder {
+  color: #718092;
+}
+
+:root[data-theme="light"] .contact-conversion--home select.form-control {
+  color: #192d44;
+}
+
+/* Preserve local photography: the light overlay is confined to the copy side. */
+:root[data-theme="light"] .hero--home {
+  background-image: linear-gradient(270deg, rgba(244,239,228,.9) 0%, rgba(244,239,228,.62) 28%, rgba(244,239,228,.18) 54%, rgba(244,239,228,.02) 70%), url("images/gw-home-hero-1600x900.png");
+}
+
+:root[data-theme="light"] .hero--cartridges { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-ink-tanks-and-refills-hero-1600x900.png"); }
+:root[data-theme="light"] .hero--journal { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-index-hero-1600x900.png"); }
+:root[data-theme="light"] .hero--ink-check-local-ink { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-check-local-ink-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-identify-cartridge { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-identify-cartridge-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-small-business-printer { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-small-business-printer-1200x630.png"); }
+:root[data-theme="light"] .hero--ink-refill-replacement { background-image: linear-gradient(90deg, rgba(244,239,228,.84) 0%, rgba(244,239,228,.58) 32%, rgba(244,239,228,.18) 58%, rgba(244,239,228,.03) 82%), url("images/gw-blog-refill-or-replacement-1200x630.png"); }
+
+:root[data-theme="light"] .local-band::after {
+  background: linear-gradient(90deg, rgba(244,239,228,.88) 0%, rgba(240,229,199,.58) 52%, rgba(240,229,199,.16) 100%);
+}
+
+@media (max-width: 800px) {
+  :root[data-theme="light"] .contact-conversion--home .contact-conversion__intro {
+    padding-left: .9rem;
+  }
+
+  :root[data-theme="light"] .hero--home {
+    background-image: linear-gradient(180deg, rgba(244,239,228,.14) 0%, rgba(244,239,228,.34) 48%, rgba(244,239,228,.78) 100%), url("images/gw-home-hero-1600x900.png");
+  }
+}
+
+
+/* Final light-screen balance: preserve the photograph first, then use restrained structural ink. */
+:root[data-theme="light"] .hero--home {
+  background-image: linear-gradient(270deg, rgba(244,239,228,.72) 0%, rgba(244,239,228,.42) 28%, rgba(244,239,228,.1) 54%, rgba(244,239,228,.01) 70%), url("images/gw-home-hero-1600x900.png");
+}
+
+:root[data-theme="light"] .hero--home .hero-content > p:not(.eyebrow),
+:root[data-theme="light"] .hero--home .hero-trust {
+  text-shadow: 0 1px 2px rgba(255,255,255,.7), 0 1px 10px rgba(244,239,228,.28);
+}
+
+:root[data-theme="light"] .contact-conversion--home .inquiry-form {
+  border-left: 3px solid #192d44;
+}
+
+:root[data-theme="light"] .contact-conversion--home .reviews-link-card {
+  border-top: 2px solid #192d44;
+}
+
+:root[data-theme="light"] .site-footer {
+  border-top: 1px solid rgba(25,45,68,.28);
+  border-bottom: 4px solid #b78f48;
+}
+
+@media (max-width: 800px) {
+  :root[data-theme="light"] .hero--home {
+    background-image: linear-gradient(180deg, rgba(244,239,228,.08) 0%, rgba(244,239,228,.18) 48%, rgba(244,239,228,.52) 100%), url("images/gw-home-hero-1600x900.png");
+  }
+}
