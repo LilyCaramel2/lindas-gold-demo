@@ -838,3 +838,134 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
     background-image: linear-gradient(180deg, rgba(244,239,228,.08) 0%, rgba(244,239,228,.18) 48%, rgba(244,239,228,.52) 100%), url("images/gw-home-hero-1600x900.png");
   }
 }
+
+/* Gold Wanted light-screen finishing layer — material contrast without navy blocks or blue artefacts. */
+:root[data-theme="light"] .section--navy::before {
+  display: none;
+}
+
+:root[data-theme="light"] .section--navy {
+  border-top: 1px solid rgba(25,45,68,.18);
+  border-bottom: 6px solid #f0e5c7;
+  background: linear-gradient(135deg, #f4efe4 0%, #f0e5c7 58%, #edf2f4 100%);
+}
+
+:root[data-theme="light"] .contact-conversion--home {
+  border-top: 2px solid #192d44;
+  border-bottom: 6px solid #f0e5c7;
+  background: linear-gradient(135deg, #f4efe4 0%, #f0e5c7 56%, #edf2f4 100%);
+}
+
+:root[data-theme="light"] .contact-conversion--home .contact-conversion__intro {
+  border-left: 0;
+}
+
+:root[data-theme="light"] .contact-conversion--home .inquiry-form {
+  border: 1px solid rgba(25,45,68,.22);
+  border-top: 2px solid #b78f48;
+  border-left: 1px solid rgba(25,45,68,.22);
+  background: linear-gradient(145deg, #fffdf8 0%, #f4efe4 68%, #f0e5c7 100%);
+  box-shadow: 0 14px 30px rgba(25,45,68,.1);
+}
+
+:root[data-theme="light"] .contact-conversion--home .reviews-link-card {
+  border: 1px solid rgba(25,45,68,.2);
+  border-top: 2px solid #b78f48;
+  background: rgba(255,253,248,.82);
+  box-shadow: 0 12px 25px rgba(25,45,68,.07);
+}
+
+:root[data-theme="light"] .contact-conversion--home .form-control {
+  background: #fffdf8;
+  border-color: rgba(25,45,68,.28);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.85);
+}
+
+:root[data-theme="light"] .hero--home {
+  background-image: linear-gradient(270deg, rgba(244,239,228,.64) 0%, rgba(244,239,228,.34) 26%, rgba(244,239,228,.08) 52%, rgba(244,239,228,0) 70%), url("images/gw-home-hero-1600x900.png");
+}
+
+:root[data-theme="light"] .local-band::after {
+  background: linear-gradient(90deg, rgba(244,239,228,.82) 0%, rgba(240,229,199,.46) 52%, rgba(240,229,199,.08) 100%);
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem 1.15rem;
+  margin-top: 1.15rem;
+}
+
+.footer-social a {
+  color: var(--gold);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible { color: var(--silver); outline: none; }
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.footer-bottom > span:first-child { justify-self: start; }
+.footer-bottom > span:last-child { justify-self: end; }
+
+.studio-credit {
+  display: inline-flex;
+  grid-column: 2;
+  align-items: center;
+  justify-content: center;
+  gap: .42rem;
+  color: #b9c4d4;
+  font-size: .64rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  line-height: 1.15;
+  text-align: left;
+  text-transform: none;
+}
+
+.studio-credit img {
+  width: 38px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.studio-credit:hover,
+.studio-credit:focus-visible { color: var(--gold); outline: none; }
+
+:root[data-theme="light"] .site-footer { background: linear-gradient(135deg, #f4efe4 0%, #f0e5c7 65%, #edf2f4 100%); }
+:root[data-theme="light"] .site-footer p,
+:root[data-theme="light"] .footer-links a,
+:root[data-theme="light"] .footer-bottom { color: #536476; }
+:root[data-theme="light"] .footer-social a { color: #73551f; }
+:root[data-theme="light"] .footer-social a:hover,
+:root[data-theme="light"] .footer-social a:focus-visible,
+:root[data-theme="light"] .studio-credit:hover,
+:root[data-theme="light"] .studio-credit:focus-visible { color: #192d44; }
+
+@media (max-width: 800px) {
+  :root[data-theme="light"] .hero--home {
+    background-image: linear-gradient(180deg, rgba(244,239,228,.06) 0%, rgba(244,239,228,.14) 46%, rgba(244,239,228,.42) 100%), url("images/gw-home-hero-1600x900.png");
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: .75rem;
+    text-align: center;
+  }
+
+  .footer-bottom > span:first-child,
+  .footer-bottom > span:last-child,
+  .studio-credit { grid-column: 1; justify-self: center; }
+  .footer-bottom > span:first-child { order: 1; }
+  .studio-credit { order: 2; }
+  .footer-bottom > span:last-child { order: 3; }
+}
