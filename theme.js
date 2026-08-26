@@ -2,6 +2,7 @@
 (function () {
   var key = 'gold-wanted-appearance';
   var root = document.documentElement;
+  root.classList.add('js');
   var saved = window.localStorage.getItem(key);
   var preview = new URLSearchParams(window.location.search).get('appearance');
   var systemLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
@@ -31,69 +32,53 @@
     });
   }
 
-  function initialiseMobileMenu() {
+  function setupMobileNavigation() {
     var header = document.querySelector('.site-header');
-    var bar = header && header.querySelector('.nav-bar');
-    var navigation = bar && bar.querySelector('.main-nav');
-    var language = bar && bar.querySelector('.language-switcher');
-    var audio = bar && bar.querySelector('.audio-guides-link');
-    var appearance = bar && bar.querySelector('[data-appearance-toggle]');
-    if (!bar || !navigation || !language || !audio || !appearance || bar.querySelector('[data-mobile-menu-toggle]')) return;
+    var nav = header && header.querySelector('.main-nav');
+    var audio = header && header.querySelector('.audio-guides-link');
+    if (!header || !nav || document.querySelector('[data-mobile-nav-toggle]')) return;
 
-    var menuId = 'gold-wanted-mobile-menu';
-    var toggle = document.createElement('button');
-    toggle.type = 'button';
-    toggle.className = 'mobile-nav-toggle';
-    toggle.setAttribute('data-mobile-menu-toggle', '');
-    toggle.setAttribute('aria-controls', menuId);
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.innerHTML = '<span aria-hidden="true" class="mobile-nav-toggle__icon">☰</span><span>Menu</span>';
+    var isAfrikaans = root.lang === 'af';
+    var menuText = isAfrikaans ? 'Kieslys' : 'Menu';
+    var openLabel = isAfrikaans ? 'Maak navigasie oop' : 'Open navigation';
+    var closeLabel = isAfrikaans ? 'Maak navigasie toe' : 'Close navigation';
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'mobile-nav-toggle';
+    button.setAttribute('data-mobile-nav-toggle', '');
+    button.setAttribute('aria-controls', 'primary-mobile-menu');
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', openLabel);
+    button.innerHTML = '<span aria-hidden="true" class="mobile-nav-toggle__mark">☰</span><span>' + menuText + '</span>';
+    nav.id = 'primary-mobile-menu';
+    nav.parentNode.insertBefore(button, nav);
 
-    var panel = document.createElement('div');
-    panel.className = 'mobile-nav-panel';
-    panel.id = menuId;
-    panel.hidden = true;
-    panel.append(navigation, language, audio, appearance);
-    bar.append(toggle, panel);
-
-    function isMobile() {
-      return window.matchMedia('(max-width: 620px)').matches;
+    if (audio && !nav.querySelector('[data-mobile-audio-link]')) {
+      var mobileAudio = audio.cloneNode(true);
+      mobileAudio.classList.add('main-nav__mobile-audio');
+      mobileAudio.setAttribute('data-mobile-audio-link', '');
+      mobileAudio.removeAttribute('aria-label');
+      mobileAudio.innerHTML = isAfrikaans ? 'Klankgidse' : 'Audio guides';
+      nav.appendChild(mobileAudio);
     }
 
-    function closeMenu() {
-      panel.hidden = true;
-      toggle.setAttribute('aria-expanded', 'false');
+    var media = window.matchMedia('(max-width: 800px)');
+    function setOpen(open) {
+      nav.classList.toggle('is-mobile-open', open && media.matches);
+      button.setAttribute('aria-expanded', open && media.matches ? 'true' : 'false');
+      button.setAttribute('aria-label', open && media.matches ? closeLabel : openLabel);
+      if (media.matches) nav.setAttribute('aria-hidden', open ? 'false' : 'true');
+      else nav.removeAttribute('aria-hidden');
     }
-
-    function syncMenuMode() {
-      if (isMobile()) {
-        closeMenu();
-      } else {
-        panel.hidden = false;
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    }
-
-    toggle.addEventListener('click', function () {
-      if (!isMobile()) return;
-      var nextOpen = panel.hidden;
-      panel.hidden = !nextOpen;
-      toggle.setAttribute('aria-expanded', nextOpen ? 'true' : 'false');
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && isMobile() && !panel.hidden) {
-        closeMenu();
-        toggle.focus();
-      }
-    });
-
-    window.addEventListener('resize', syncMenuMode);
-    syncMenuMode();
+    button.addEventListener('click', function () { setOpen(!nav.classList.contains('is-mobile-open')); });
+    if (media.addEventListener) media.addEventListener('change', function () { setOpen(false); });
+    else media.addListener(function () { setOpen(false); });
+    setOpen(false);
   }
 
   document.addEventListener('DOMContentLoaded', function () {
     updateButtons();
+    setupMobileNavigation();
     document.querySelectorAll('[data-appearance-toggle]').forEach(function (button) {
       button.addEventListener('click', function () {
         root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
@@ -101,6 +86,5 @@
         updateButtons();
       });
     });
-    initialiseMobileMenu();
   });
 })();
