@@ -1,10 +1,18 @@
 # GA4 measurement status
 
-**Measurement ID:** `G-N67SRPL2BS`  
-**Status:** Active after deployment to `main`.
+**Measurement ID:** **Not set**
+**Status:** **Prepared and inactive.** Do not use the earlier account or its Measurement ID.
 
-The site uses `cookie-consent.js` as the consent gate. It reads the stored `gold-wanted-cookie-choice` value and listens for the `goldWantedConsent` event. With **Essential only**, the site does not load Google’s `gtag.js` file and does not create `window.gtag`. With **Allow analytics**, it loads GA4 and queues the configuration for the measurement ID.
+The public site contains `analytics-config.js`, but the file deliberately leaves `window.GOLD_WANTED_GA4_MEASUREMENT_ID` blank. `analytics-events.js` loads Google’s tag only when both conditions are true: a valid owner-supplied `G-...` Measurement ID exists and the visitor has selected **Allow analytics**. With **Essential only**, analytics loading and event delivery remain inactive.
 
-Only these non-personal events are recorded: `whatsapp_enquiry`, `directions_click`, `contact_form_submit`, `audio_play` and `language_switch`. Do not add names, phone numbers, email addresses, printer models, free-text messages or jewellery details to GA4 event parameters.
+The current provider-neutral event layer may record these non-personal interactions after consent: declared `data-track` events, WhatsApp links, Facebook links, Google Maps/listing links, button CTAs, plus form-start and form-submit events. Do **not** add names, phone numbers, email addresses, printer models, free-text messages, jewellery details or other enquiry content as GA4 parameters.
 
-Before a future consent or analytics change, test both choices on one English and one Afrikaans route. Check that Essential only leaves no `googletagmanager.com/gtag/js` script tag or `window.gtag` on the page.
+## Correct-account activation
+
+Use **Linda’s `cartridgecaregp@gmail.com` Google account** or an owner-approved account with the required property access. In Google Analytics, create or select the Gold Wanted GA4 property, open its **Web data stream**, and copy the Measurement ID beginning `G-`. Google states that finding a Measurement ID requires Editor or higher property access. [1]
+
+Place the confirmed ID in `analytics-config.js` only, deploy it, then test both consent choices on one English and one Afrikaans page. Under **Essential only**, the page should have no `googletagmanager.com/gtag/js` script. Under **Allow analytics**, check GA4 DebugView or Realtime and click a harmless test route such as the Facebook footer link or Menu control.
+
+## References
+
+[1] [Google Analytics Help — Measurement ID](https://support.google.com/analytics/answer/12270356?hl=en)
