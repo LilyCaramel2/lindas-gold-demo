@@ -32,7 +32,12 @@
   }
 
   function createBanner() {
-    if (getStoredChoice() || document.getElementById(bannerId)) return;
+    var storedChoice = getStoredChoice();
+    if (storedChoice) {
+      document.documentElement.dataset.cookieChoice = storedChoice;
+      return;
+    }
+    if (document.getElementById(bannerId)) return;
 
     var afrikaans = document.documentElement.lang === 'af';
     var prefix = document.documentElement.dataset.assetPrefix || '';

@@ -1,9 +1,19 @@
 (function () {
   var measurementId = window.GOLD_WANTED_GA4_MEASUREMENT_ID;
   var dataLayer = window.dataLayer = window.dataLayer || [];
+  var initialized = false;
   function gtag() { dataLayer.push(arguments); }
-
-  if (measurementId && /^G-[A-Z0-9]+$/i.test(measurementId)) {
+  function hasAnalyticsConsent() {
+    try {
+      return document.documentElement.dataset.cookieChoice === 'analytics'
+        || window.localStorage.getItem('gold-wanted-cookie-choice') === 'analytics';
+    } catch (error) {
+      return document.documentElement.dataset.cookieChoice === 'analytics';
+    }
+  }
+  function initializeAnalytics() {
+    if (initialized || !hasAnalyticsConsent() || !measurementId || !/^G-[A-Z0-9]+$/i.test(measurementId)) return;
+    initialized = true;
     var script = document.createElement("script");
     script.async = true;
     script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
@@ -11,15 +21,17 @@
     gtag("js", new Date());
     gtag("config", measurementId, { anonymize_ip: true });
   }
+  initializeAnalytics();
+  document.addEventListener('goldWantedConsent', function (event) {
+    if (event.detail && event.detail.choice === 'analytics') initializeAnalytics();
+  });
 
   window.goldWantedAnalytics = {
     event: function (eventName, parameters) {
+      if (!hasAnalyticsConsent()) return;
+      initializeAnalytics();
       var payload = Object.assign({ page_path: window.location.pathname }, parameters || {});
-      if (measurementId && typeof window.gtag === "function") {
-        window.gtag("event", eventName, payload);
-      } else {
-        gtag("event", eventName, payload);
-      }
+      gtag("event", eventName, payload);
       window.dispatchEvent(new CustomEvent("gold-wanted:analytics", { detail: { event: eventName, parameters: payload } }));
     }
   };
