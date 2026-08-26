@@ -76,9 +76,35 @@
     setOpen(false);
   }
 
+  function setupStickyWhatsApp() {
+    if (document.querySelector('[data-sticky-whatsapp]')) return;
+    var afrikaans = root.lang === 'af';
+    var link = document.createElement('a');
+    link.className = 'whatsapp-float';
+    link.href = afrikaans
+      ? 'https://wa.me/27823727597?text=Hallo%20Gold%20Wanted%2C%20ek%20wil%20graag%20%27n%20vraag%20vra.'
+      : 'https://wa.me/27823727597?text=Hello%20Gold%20Wanted%2C%20I%20would%20like%20to%20ask%20a%20question.';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.dataset.track = 'whatsapp_sticky';
+    link.dataset.stickyWhatsapp = '';
+    link.setAttribute('aria-label', afrikaans ? 'Vra Gold Wanted op WhatsApp' : 'Ask Gold Wanted on WhatsApp');
+    link.innerHTML = '<span aria-hidden="true" class="whatsapp-float__mark">W</span><span class="whatsapp-float__label">WhatsApp</span>';
+    document.body.appendChild(link);
+
+    function syncCookiePanel() {
+      var cookiePanelOpen = Boolean(document.getElementById('gold-wanted-cookie-banner'));
+      link.hidden = cookiePanelOpen;
+      link.tabIndex = cookiePanelOpen ? -1 : 0;
+    }
+    syncCookiePanel();
+    new MutationObserver(syncCookiePanel).observe(document.body, { childList: true, subtree: true });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     updateButtons();
     setupMobileNavigation();
+    setupStickyWhatsApp();
     document.querySelectorAll('[data-appearance-toggle]').forEach(function (button) {
       button.addEventListener('click', function () {
         root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';

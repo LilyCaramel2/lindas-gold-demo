@@ -187,7 +187,12 @@ p { margin: 0 0 1.15rem; }
 .responsive-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
 .map-container { min-height: 430px; overflow: hidden; border: 1px solid rgba(38,155,255,.38); border-radius: 1rem; background: var(--glass); }
 .map-container iframe { width: 100%; min-height: 430px; }
-.whatsapp-float { position: fixed; z-index: 20; right: 1.2rem; bottom: 1.2rem; display: grid; width: 52px; height: 52px; border: 1px solid rgba(38,155,255,.7); border-radius: 50%; background: var(--ink-700); color: var(--silver); box-shadow: 0 12px 28px rgba(0,0,0,.32); place-items: center; }
+.whatsapp-float { position: fixed; z-index: 35; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); display: inline-flex; align-items: center; justify-content: center; gap: .42rem; min-width: 52px; min-height: 52px; padding: .7rem .84rem; border: 1px solid rgba(213,194,140,.82); border-radius: 999px; background: #081c35; color: #eef1f6; box-shadow: 0 12px 28px rgba(0,0,0,.32); font-size: .68rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; transition: transform 160ms ease-out, border-color 160ms ease-out, background 160ms ease-out; }
+.whatsapp-float:hover, .whatsapp-float:focus-visible { border-color: #eef1f6; background: #153f6c; outline: none; transform: translateY(-2px); }
+.whatsapp-float:active { transform: scale(.97); }
+.whatsapp-float__mark { color: var(--gold); font-size: 1.1rem; line-height: 1; transform: rotate(-20deg); }
+:root[data-theme="light"] .whatsapp-float { border-color: #b78f48; background: #d5c28c; color: #192d44; box-shadow: 0 12px 28px rgba(25,45,68,.22); }
+:root[data-theme="light"] .whatsapp-float:hover, :root[data-theme="light"] .whatsapp-float:focus-visible { border-color: #192d44; background: #f4efe4; }
 
 /* Static article templates: fluid reading pages instead of full-width WordPress-style blocks. */
 .page { padding: 5rem 0 0; }
@@ -790,6 +795,8 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   .cookie-content p:not(.service-label), .cookie-content a { font-size: .74rem; line-height: 1.35; }
   .cookie-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; margin-top: .55rem; }
   .btn-cookie { justify-content: center; min-height: 36px; padding-inline: .45rem; font-size: .57rem; }
+  .whatsapp-float { right: max(.7rem, env(safe-area-inset-right)); bottom: max(.7rem, env(safe-area-inset-bottom)); min-width: 126px; padding: .7rem .82rem; }
+  .whatsapp-float__mark { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.25rem; font-weight: 700; transform: none; }
 }
 
 
