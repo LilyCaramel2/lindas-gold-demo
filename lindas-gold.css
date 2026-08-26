@@ -103,6 +103,10 @@ p { margin: 0 0 1.15rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.7rem; }
 .hero-trust { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.25rem; color: var(--silver-muted); font-size: .78rem; }
 .hero-trust span::before { display: inline-block; width: .5rem; height: .5rem; margin-right: .4rem; border: 1px solid var(--harbour-light); border-radius: 50%; box-shadow: 0 0 9px rgba(38,155,255,.6); content: ""; }
+.hero-language-link { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .56rem; width: fit-content; margin: 1.15rem 0 0; padding: .48rem .68rem; border: 1px solid rgba(38,155,255,.38); border-radius: .6rem; background: rgba(5,22,44,.42); box-shadow: inset 0 0 18px rgba(38,155,255,.06); color: var(--silver-muted); font-size: .8rem; font-weight: 700; }
+.hero-language-link span { color: var(--gold); font-size: .61rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+.hero-language-link a { color: var(--silver); text-decoration: underline; text-decoration-color: rgba(38,155,255,.85); text-decoration-thickness: 1px; text-underline-offset: .28rem; }
+.hero-language-link a:hover, .hero-language-link a:focus-visible { color: var(--gold); outline: none; }
 .hero--home { min-height: min(790px, calc(100vh - 78px)); background-position: center; background-image: linear-gradient(270deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.78) 32%, rgba(5,22,44,.24) 54%, rgba(5,22,44,.02) 74%), url("images/gw-home-hero-1600x900.webp"); }
 .hero--home .hero-content { width: min(43%, 610px); margin-left: auto; }
 .hero--cartridges { background-image: linear-gradient(90deg, rgba(5,22,44,.96) 0%, rgba(5,22,44,.72) 55%, rgba(5,22,44,.24) 100%), url("images/gw-ink-tanks-and-refills-hero-1600x900.webp"); }
@@ -799,6 +803,9 @@ label { display: block; margin-bottom: .35rem; color: var(--silver-muted); font-
   color: #192d44;
   text-shadow: 0 1px 1px rgba(244,239,228,.82);
 }
+
+:root[data-theme="light"] .hero-language-link { border-color: rgba(25,45,68,.24); background: rgba(244,239,228,.82); color: #536476; }
+:root[data-theme="light"] .hero-language-link a { color: #192d44; text-decoration-color: #b78f48; }
 
 :root[data-theme="light"] .section--navy::before {
   display: block;
